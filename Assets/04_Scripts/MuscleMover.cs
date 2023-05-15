@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class MuscleMover : MonoBehaviour
 {
     public Transform Target;
     public Transform MuscleSphere;
-
+    public LayerMask layerMask;
     Vector3 targetPos;
 
     bool isHolding;
@@ -15,6 +18,7 @@ public class MuscleMover : MonoBehaviour
     void Start()
     {
         targetPos = transform.position;
+        gameObject.GetComponent<Renderer>().material.color = Color.green;
     }
 
     // Update is called once per frame
@@ -24,37 +28,52 @@ public class MuscleMover : MonoBehaviour
         {
 
             Vector3 mousePos = Input.mousePosition;
-            float h = 2f * Time.deltaTime *-Input.GetAxis("Mouse X");
+            float h = 2f * Time.deltaTime * -Input.GetAxis("Mouse X");
             Target.transform.Translate(0, h, 0);
-
+            Target.transform.position = new Vector3(Target.transform.position.x, Mathf.Clamp(Target.transform.position.y, -0.3f, 1.5f), Target.transform.position.z);
             //mousePos.z = 1f;
             //mousePos.x = transform.position.x;
             //// Set the position of the transform to a position defined by the mouse
             //// which is zDistance units away from the screenCamera
             //transform.position = Camera.main.ScreenToWorldPoint(mousePos);
 
-            print("Z: " + mousePos.x);
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray rayToCameraPos = new Ray(transform.position, Camera.main.transform.position - transform.position);
+            Vector3 dir = gameObject.transform.position - Camera.main.transform.position;
+            RaycastHit hitInfo = new RaycastHit();
+            if (Physics.Raycast(Camera.main.transform.position, dir, out hitInfo, 1000, layerMask))
+            {
+                Debug.Log(hitInfo.collider.name + ", " + hitInfo.collider.tag);
+                isHolding = true;
+            }
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            isHolding = false;
+
         }
 
 
     }
     private void OnMouseDown()
     {
-        if (!isHolding && Input.GetMouseButtonDown(0))
-        {
-            isHolding = true;
-            print("mouse pressed");
-        }
+        //if (!isHolding && Input.GetMouseButtonDown(0))
+        //{
+        //    isHolding = true;
+        //    print("mouse pressed");
+        //}
 
     }
     private void OnMouseUp()
     {
 
-        if (isHolding && Input.GetMouseButtonUp(0))
-        {
-            isHolding = false;
-            print("mouse NOT pressed");
+        //if (isHolding && Input.GetMouseButtonUp(0))
+        //{
+        //    isHolding = false;
+        //    print("mouse NOT pressed");
 
-        }
+        //}
     }
 }
