@@ -42,7 +42,7 @@ public class CameraRotate : MonoBehaviour
 
             float mouseY = Input.GetAxis("Mouse Y");
                 transform.Rotate(Vector3.right, -mouseY * rotationSpeed * Time.deltaTime);
-            Debug.Log(transform.rotation.eulerAngles.x);
+        
         }
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
