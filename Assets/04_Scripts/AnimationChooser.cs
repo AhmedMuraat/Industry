@@ -6,6 +6,7 @@ public class AnimationChooser : MonoBehaviour
 {
     Animator Animator;
     public GameObject FullRig;
+    public GameObject Target;
 
     Collider[] RagdollColliders;
     Rigidbody[] LimbsRigidBodies;
@@ -34,6 +35,11 @@ public class AnimationChooser : MonoBehaviour
         foreach (Collider col in RagdollColliders)
         {
             col.enabled = false;
+
+            if (col.gameObject.tag == "Moveable")
+            {
+                col.enabled = true;
+            }
         }
 
         foreach (Rigidbody rigid in LimbsRigidBodies)
@@ -60,7 +66,17 @@ public class AnimationChooser : MonoBehaviour
         {
             StartStandingUp = false;
             Animator.SetTrigger("StandUp2");
-            StartCoroutine(AnimationOff());
+            if (Target.transform.position.y < 1.002 || Target.transform.position.y > 1.195)
+            {
+                StartCoroutine(AnimationOff());
+                Debug.Log("Bad posture");
+            }
+            else
+            {
+                Debug.Log("Good posture");
+            }
+
+            Debug.Log(Target.transform.position.y);
 
         }
         if (Animator.GetCurrentAnimatorStateInfo(0).IsName("Stand Up"))

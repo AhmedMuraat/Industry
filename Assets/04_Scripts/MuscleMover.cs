@@ -20,12 +20,15 @@ public class MuscleMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Target.transform.position);
         if (isHolding)
         {
 
             Vector3 mousePos = Input.mousePosition;
             float h = 2f * Time.deltaTime * -Input.GetAxis("Mouse X");
             Target.transform.Translate(0, h, 0);
+            Target.transform.position = new Vector3(Target.transform.position.x, Mathf.Clamp(Target.transform.position.y, -0.3f, 1.5f), Target.transform.position.z);
+
 
             //mousePos.z = 1f;
             //mousePos.x = transform.position.x;
@@ -33,7 +36,7 @@ public class MuscleMover : MonoBehaviour
             //// which is zDistance units away from the screenCamera
             //transform.position = Camera.main.ScreenToWorldPoint(mousePos);
 
-            print("Z: " + mousePos.x);
+            //print("Z: " + mousePos.x);
         }
 
         if (Input.GetMouseButtonDown(0))
@@ -43,8 +46,8 @@ public class MuscleMover : MonoBehaviour
             RaycastHit hitInfo = new RaycastHit();
             if (Physics.Raycast(Camera.main.transform.position, dir, out hitInfo, 1000, layerMask))
             {
-                Debug.Log(hitInfo.collider.name + ", " + hitInfo.collider.tag);
-                isHolding = true;
+                if (hitInfo.collider.tag == "Moveable")
+                    isHolding = true;
             }
         }
         else if (Input.GetMouseButtonUp(0))
