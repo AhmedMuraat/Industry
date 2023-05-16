@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AnimationChooser : MonoBehaviour
@@ -10,11 +11,17 @@ public class AnimationChooser : MonoBehaviour
 
     Collider[] RagdollColliders;
     Rigidbody[] LimbsRigidBodies;
+    GameObject[] JointsOff;
+    GameObject[] JointsOn;
 
     void GetRagdollElements()
     {
         RagdollColliders = FullRig.GetComponentsInChildren<Collider>();
         LimbsRigidBodies = FullRig.GetComponentsInChildren<Rigidbody>();
+        JointsOff = FindObjectsOfType<GameObject>();
+        JointsOff = System.Array.FindAll(JointsOff, obj => obj.layer == LayerMask.NameToLayer("MuscleOff"));
+        JointsOn = FindObjectsOfType<GameObject>();
+        JointsOn = System.Array.FindAll(JointsOn, obj => obj.layer == LayerMask.NameToLayer("Muscle"));
     }
 
     void RagdollmodeOn()
@@ -76,6 +83,8 @@ public class AnimationChooser : MonoBehaviour
                 Debug.Log("Good posture");
             }
 
+            TurnOffJoints();
+
             Debug.Log(Target.transform.position.y);
 
         }
@@ -92,6 +101,19 @@ public class AnimationChooser : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Animator.enabled = false;
         RagdollmodeOn();
+    }
+
+    void TurnOffJoints()
+    {
+        foreach( GameObject obj in JointsOff)
+        {
+            obj.GetComponent<MeshRenderer>().enabled = false;
+        }
+
+        foreach ( GameObject obj in JointsOn)
+        {
+            obj.GetComponent<MeshRenderer>().enabled = false;
+        }
     }
 
     
