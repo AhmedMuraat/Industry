@@ -20,7 +20,6 @@ public class MuscleMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Target.transform.position);
         if (isHolding)
         {
 
