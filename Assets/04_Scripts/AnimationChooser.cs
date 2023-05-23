@@ -8,11 +8,19 @@ public class AnimationChooser : MonoBehaviour
     Animator Animator;
     public GameObject FullRig;
     public GameObject Target;
+    public string AnimationType;
+    public string AnimationName;
 
     Collider[] RagdollColliders;
     Rigidbody[] LimbsRigidBodies;
     GameObject[] JointsOff;
     GameObject[] JointsOn;
+
+    public float minJointHeight = 0.627f;
+    public float maxJointHeight = 0.86f;
+
+    public bool FirstCheck = true;
+    public bool SecondCheck = false;
 
     void GetRagdollElements()
     {
@@ -72,23 +80,48 @@ public class AnimationChooser : MonoBehaviour
         if (StartStandingUp)
         {
             StartStandingUp = false;
-            Animator.SetTrigger("StandUp2");
-            if (Target.transform.position.y < 1.002 || Target.transform.position.y > 1.195)
+            if (FirstCheck)
             {
-                StartCoroutine(AnimationOff());
-                Debug.Log("Bad posture");
+                Animator.SetTrigger(AnimationType);
+                if (Target.transform.position.y > maxJointHeight || Target.transform.position.y < minJointHeight)
+                {
+                    StartCoroutine(AnimationOff());
+                    Debug.Log("Bad posture");
+                    Debug.Log(Target.transform.position.y);
+                }
+                else
+                {
+                    Debug.Log("Good posture");
+
+                    StartCoroutine(PauseAnimation());
+                }
+
+                FirstCheck = false;
             }
-            else
+            else if (SecondCheck)
             {
-                Debug.Log("Good posture");
+                Debug.Log(Target.transform.position.y);
+
+                if (Target.transform.position.y < 1.3 || Target.transform.position.y > 1.4)
+                {
+                    Debug.Log("Bad posture");
+                    Animator.enabled = false;
+                    RagdollmodeOn();
+                }
+                else
+                {
+                    Debug.Log("Good posture");
+                    Animator.speed = 1f;
+                }
             }
+            
 
             TurnOffJoints();
 
-            Debug.Log(Target.transform.position.y);
+            
 
         }
-        if (Animator.GetCurrentAnimatorStateInfo(0).IsName("Stand Up"))
+        if (Animator.GetCurrentAnimatorStateInfo(0).IsName(AnimationName))
         {
             IsPlaying = false;
             StartStandingUp = false;
@@ -101,6 +134,15 @@ public class AnimationChooser : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Animator.enabled = false;
         RagdollmodeOn();
+    }
+
+    IEnumerator PauseAnimation()
+    {
+        yield return new WaitForSeconds(1.5f);
+        SecondCheck = true;
+        Animator.speed = 0f;
+
+        TurnOnJoints();
     }
 
     void TurnOffJoints()
@@ -116,5 +158,23 @@ public class AnimationChooser : MonoBehaviour
         }
     }
 
-    
+    void TurnOnJoints()
+    {
+        foreach (GameObject obj in JointsOff)
+        {
+            obj.GetComponent<MeshRenderer>().enabled = true;
+        }
+
+        foreach (GameObject obj in JointsOn)
+        {
+            obj.GetComponent<MeshRenderer>().enabled = true;
+        }
+    }
+
+    public void StartAnimation()
+    {
+        StartStandingUp = true;
+    }
+
+
 }

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class BoneVisualizer : MonoBehaviour
 {
-    public float lineThickness = 0.2f;
+    public GameObject boneVisualizationPrefab; // Reference to the bone visualization prefab
+    public Transform characterRoot; // Root transform of the character rig
+    public float boneVisualizationScale = 1f; // Scale factor for bone visualizations
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        VisualizeSkeleton();
     }
 
     // Update is called once per frame
@@ -18,31 +20,31 @@ public class BoneVisualizer : MonoBehaviour
 
     }
 
-    private void OnRenderObject()
+    private void VisualizeSkeleton()
     {
-        RenderBoneHierarchy();
+        // Traverse the bone hierarchy and visualize each bone
+        TraverseBones(characterRoot, null);
     }
 
-    private void RenderBoneHierarchy()
+    private void TraverseBones(Transform currentBone, Transform parentVisualization)
     {
-        Transform[] bones = GetComponentInChildren<SkinnedMeshRenderer>().bones;
+        // Instantiate a bone visualization object for the current bone
+        GameObject boneVisualization = Instantiate(boneVisualizationPrefab, currentBone.position, currentBone.rotation);
 
-        
-
-        GL.Begin(GL.LINES);
-        GL.Color(Color.blue);
-
-        for (int i = 0; i < bones.Length; i++)
+        // Parent the bone visualization object to the parent visualization (if provided)
+        if (parentVisualization != null)
         {
-            if (bones[i].parent != null)
-            {
-                // Render line between current bone and its parent bone
-                GL.Vertex(bones[i].position);
-                GL.Vertex(bones[i].parent.position);
-            }
+            boneVisualization.transform.SetParent(parentVisualization);
         }
 
-        GL.End();
+        // Adjust the scale of the bone visualization
+        boneVisualization.transform.localScale = Vector3.one * boneVisualizationScale;
+
+        // Recursively visualize the child bones
+        foreach (Transform childBone in currentBone)
+        {
+            TraverseBones(childBone, boneVisualization.transform);
+        }
     }
 
 }
