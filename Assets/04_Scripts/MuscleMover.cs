@@ -42,14 +42,6 @@ public class MuscleMover : MonoBehaviour
                 {
                     isHolding = true;
 
-
-                    //foreach (GameObject joint in MoveableJoints)
-                    //{
-                    //    if (joint != gameObject)
-                    //    {
-                    //        joint.GetComponent<MuscleMover>().enabled = false;
-                    //    }
-                    //}
                 }
             }
 

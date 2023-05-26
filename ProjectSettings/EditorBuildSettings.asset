@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/00_Scenes/Main.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/00_Scenes/Main 1.unity
     guid: 52914934caee30341b3a20477f7cdda4
+  - enabled: 1
+    path: Assets/00_Scenes/Valentino.unity
+    guid: aff81ed71ab8e5e41a39ef63c15008f7
   m_configObjects: {}
