@@ -1276,6 +1276,7 @@ MonoBehaviour:
     m_Bits: 64
   MoveableJoints: []
   otherTarget: {fileID: 0}
+  isHolding: 0
 --- !u!1 &346710312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,6 +1777,7 @@ MonoBehaviour:
     m_Bits: 64
   MoveableJoints: []
   otherTarget: {fileID: 1942330291}
+  isHolding: 0
 --- !u!23 &568732796
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1990,6 +1992,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191822642886521434, guid: 8df277d5b3ec52e429a6dbe18d99f2b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3191822643277710535, guid: 8df277d5b3ec52e429a6dbe18d99f2b7,
         type: 3}
@@ -6134,6 +6141,7 @@ MonoBehaviour:
     m_Bits: 64
   MoveableJoints: []
   otherTarget: {fileID: 568732792}
+  isHolding: 0
 --- !u!23 &1942330295
 MeshRenderer:
   m_ObjectHideFlags: 0
