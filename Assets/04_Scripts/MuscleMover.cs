@@ -8,6 +8,8 @@ public class MuscleMover : MonoBehaviour
     public Transform Target;
     public Transform MuscleSphere;
     public LayerMask layerMask;
+    public GameObject[] MoveableJoints;
+    public GameObject otherTarget;
     Vector3 targetPos;
 
     public bool isHolding;
@@ -15,7 +17,10 @@ public class MuscleMover : MonoBehaviour
     void Start()
     {
         targetPos = transform.position;
+        MoveableJoints = FindObjectsOfType<GameObject>();
+        //MoveableJoints = System.Array.FindAll(MoveableJoints, obj => obj.layer == LayerMask.NameToLayer("Muscle"));
     }
+
 
     // Update is called once per frame
     void Update()
@@ -31,10 +36,26 @@ public class MuscleMover : MonoBehaviour
             RaycastHit hitInfo = new RaycastHit();
             if (Physics.Raycast(ray, out hitInfo, 1000, layerMask))
             {
-                if (hitInfo.collider.tag == "Moveable")
+                Debug.Log("Raycast hit an object: " + hit.collider.gameObject.name);
+
+                if (hit.collider.gameObject.name == gameObject.name)
+                {
                     isHolding = true;
+
+
+                    //foreach (GameObject joint in MoveableJoints)
+                    //{
+                    //    if (joint != gameObject)
+                    //    {
+                    //        joint.GetComponent<MuscleMover>().enabled = false;
+                    //    }
+                    //}
+                }
             }
+
+
         }
+
         else if (Input.touchCount == 0)
         { isHolding = false; }
 
