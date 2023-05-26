@@ -36,9 +36,9 @@ public class MuscleMover : MonoBehaviour
             RaycastHit hitInfo = new RaycastHit();
             if (Physics.Raycast(ray, out hitInfo, 1000, layerMask))
             {
-                Debug.Log("Raycast hit an object: " + hit.collider.gameObject.name);
+                Debug.Log("Raycast hit an object: " + hitInfo.collider.gameObject.name);
 
-                if (hit.collider.gameObject.name == gameObject.name)
+                if (hitInfo.collider.gameObject.name == gameObject.name)
                 {
                     isHolding = true;
 
