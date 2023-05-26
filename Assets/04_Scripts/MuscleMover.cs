@@ -7,14 +7,21 @@ public class MuscleMover : MonoBehaviour
 {
     public Transform Target;
     public Transform MuscleSphere;
+    public Material Orignalcolor;
+
     public LayerMask layerMask;
     Vector3 targetPos;
+    private Renderer sphereRenderer;
 
-    bool isHolding;
+    public bool isHolding;
     // Start is called before the first frame update
     void Start()
     {
         targetPos = transform.position;
+
+        sphereRenderer = GetComponent<Renderer>();
+        // Store the original color
+        sphereRenderer.material = Orignalcolor;
     }
 
     // Update is called once per frame
