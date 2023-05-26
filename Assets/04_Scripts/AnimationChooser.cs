@@ -10,6 +10,7 @@ public class AnimationChooser : MonoBehaviour
     public GameObject FullRig;
     public GameObject Target;
     public GameObject Target2;
+
     public string AnimationType;
     public string AnimationName;
 
@@ -102,7 +103,6 @@ public class AnimationChooser : MonoBehaviour
                 }
                 else
                 {
-
                     if (gameObject.tag == "2Joints")
                     {
                         if (Target2.transform.position.y > maxJointHeightTarget2 || Target2.transform.position.y < minJointHeightTarget2)
@@ -190,6 +190,7 @@ public class AnimationChooser : MonoBehaviour
     IEnumerator PauseAnimation()
     {
         yield return new WaitForSeconds(KeyframeDelay);
+
         SecondCheck = true;
         Animator.speed = 0f;
 
