@@ -11,6 +11,7 @@ public class MuscleSlider : MonoBehaviour
     public float sliderValue;
     public Transform Target;
     public GameObject Camera;
+    public float directionMultiplier;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class MuscleSlider : MonoBehaviour
         print(sliderValue);
 
         Vector3 newPosition = Target.position;
-        newPosition.y = sliderValue;
+        newPosition.y = sliderValue * directionMultiplier;
 
         Target.position = newPosition;
     }
