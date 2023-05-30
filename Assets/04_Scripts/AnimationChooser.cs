@@ -13,7 +13,7 @@ public class AnimationChooser : MonoBehaviour
     public GameObject Target;
     public GameObject Target2;
     public PuppetMaster puppetMaster;
-    public AimIK aimIK;
+    public LookAtIK aimIK;
     public string AnimationType;
     public string AnimationName;
 

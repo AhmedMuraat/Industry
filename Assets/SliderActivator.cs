@@ -19,23 +19,26 @@ public class SliderActivator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Touch touch = Input.GetTouch(0);
-        Ray rayToCameraPos = new Ray(transform.position, Camera.main.transform.position - transform.position);
-        Ray ray = Camera.main.ScreenPointToRay(touch.position);
-        Vector3 dir = gameObject.transform.position - Camera.main.transform.position;
-        RaycastHit hitInfo = new RaycastHit();
-        if (Physics.Raycast(ray, out hitInfo, 1000, layerMask))
+        if (Input.touchCount == 1)
         {
-            Debug.Log("Raycast hit an object: " + hitInfo.collider.gameObject.name);
-
-            if (hitInfo.collider.gameObject.name == gameObject.name)
+            Touch touch = Input.GetTouch(0);
+            Ray rayToCameraPos = new Ray(transform.position, Camera.main.transform.position - transform.position);
+            Ray ray = Camera.main.ScreenPointToRay(touch.position);
+            Vector3 dir = gameObject.transform.position - Camera.main.transform.position;
+            RaycastHit hitInfo = new RaycastHit();
+            if (Physics.Raycast(ray, out hitInfo, 1000, layerMask))
             {
-                print("muscle pressed");
-                Slider.SetActive(true);
+                Debug.Log("Raycast hit an object: " + hitInfo.collider.gameObject.name);
 
-                gameObject.GetComponent<Renderer>().material = newMat;
+                if (hitInfo.collider.gameObject.name == gameObject.name)
+                {
+                    print("muscle pressed");
+                    Slider.SetActive(true);
 
-                ResetOtherJoints();
+                    gameObject.GetComponent<Renderer>().material = newMat;
+
+                    ResetOtherJoints();
+                }
             }
         }
     }

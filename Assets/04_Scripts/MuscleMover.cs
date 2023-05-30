@@ -11,18 +11,12 @@ public class MuscleMover : MonoBehaviour
     public LayerMask layerMask;
     public GameObject[] MoveableJoints;
     public GameObject otherTarget;
-    public GameObject Slider;
-    Slider sliderElement;
-    Vector3 targetPos;
 
     public bool isHolding;
 
-    public GameObject CurrentJointSelected;
     // Start is called before the first frame update
     void Start()
     {
-        targetPos = transform.position;
-        sliderElement = Slider.GetComponent<Slider>();
         //MoveableJoints = FindObjectsOfType<GameObject>();
         //MoveableJoints = System.Array.FindAll(MoveableJoints, obj => obj.layer == LayerMask.NameToLayer("Muscle"));
     }
@@ -47,12 +41,6 @@ public class MuscleMover : MonoBehaviour
                 if (hitInfo.collider.gameObject.name == gameObject.name)
                 {
                     isHolding = true;
-                    CurrentJointSelected = hitInfo.collider.gameObject;
-
-                }
-                else
-                {
-                    CurrentJointSelected = null;
                 }
             }
 
@@ -66,7 +54,7 @@ public class MuscleMover : MonoBehaviour
         {
             float h = 0.2f * Time.deltaTime * -Input.touches[0].deltaPosition.x;
             Target.transform.Translate(0, h, 0);
-            Target.transform.position = new Vector3(Target.transform.position.x, Mathf.Clamp(Target.transform.position.y, 0.25f, 1.5f), Target.transform.position.z);
+            Target.transform.position = new Vector3(Target.transform.position.x, Mathf.Clamp(Target.transform.position.y, -0.3f, 2.35f), Target.transform.position.z);
 
             //if(transform.position.y < 0.25f) Target.transform.position = new Vector3(Target.transform.position.x, 0.25f, Target.transform.position.z);
             //if(transform.position.y > 1.5f) Target.transform.position = new Vector3(Target.transform.position.x, 1.5f, Target.transform.position.z);
@@ -75,17 +63,5 @@ public class MuscleMover : MonoBehaviour
 
 
         }
-
-        if (CurrentJointSelected == null)
-        {
-            Slider.SetActive(false);
-        }
-        else
-        {
-            Slider.SetActive(true);
-            //sliderElement.value
-        }
-
-
     }
 }
