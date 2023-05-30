@@ -99,7 +99,7 @@ public class AnimationChooser : MonoBehaviour
                 {
                     StartCoroutine(AnimationOff());
                     Debug.Log("Bad posture");
-                    Debug.Log(Target.transform.position.y);
+                    Debug.Log(Target2.transform.position.y);
                 }
                 else
                 {
@@ -109,13 +109,14 @@ public class AnimationChooser : MonoBehaviour
                         {
                             StartCoroutine(AnimationOff());
                             Debug.Log("Bad posture");
-                            Debug.Log(Target.transform.position.y);
+                            Debug.Log(Target2.transform.position.y);
                         }
                         else
                         {
                             Debug.Log("Good posture");
 
                             StartCoroutine(PauseAnimation());
+                            Debug.Log(Target2.transform.position.y);
                         }
                     }
                     else
@@ -147,7 +148,7 @@ public class AnimationChooser : MonoBehaviour
                         if (Target2.transform.position.y < minJointHeightTarget2Check2 || Target2.transform.position.y > maxJointHeightTarget2Check2)
                         {
                             Debug.Log("Bad posture");
-                            print(Target2.transform.position.y);
+                            //print(Target2.transform.position.y);
                             Animator.enabled = false;
                             RagdollmodeOn();
                         }
