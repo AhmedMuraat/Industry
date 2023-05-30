@@ -1,3 +1,5 @@
+using RootMotion.Dynamics;
+using RootMotion.FinalIK;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -10,10 +12,12 @@ public class AnimationChooser : MonoBehaviour
     public GameObject FullRig;
     public GameObject Target;
     public GameObject Target2;
-
+    public PuppetMaster puppetMaster;
+    public AimIK aimIK;
     public string AnimationType;
     public string AnimationName;
 
+    public GameObject Chair;
     Collider[] RagdollColliders;
     Rigidbody[] LimbsRigidBodies;
     GameObject[] JointsOff;
@@ -27,34 +31,39 @@ public class AnimationChooser : MonoBehaviour
     public float maxJointHeightCheck2 = 1.4f;
     public float minJointHeightTarget2Check2 = 1f;
     public float maxJointHeightTarget2Check2 = 1.26f;
-    public float FallDelay = 2f;
+    public float FallDelay = 0.5f;
     public float KeyframeDelay = 1.5f;
 
     public bool FirstCheck = true;
     public bool SecondCheck = false;
 
 
+
     void GetRagdollElements()
     {
         RagdollColliders = FullRig.GetComponentsInChildren<Collider>();
         LimbsRigidBodies = FullRig.GetComponentsInChildren<Rigidbody>();
-        JointsOff = FindObjectsOfType<GameObject>();
-        JointsOff = System.Array.FindAll(JointsOff, obj => obj.layer == LayerMask.NameToLayer("MuscleOff"));
-        JointsOn = FindObjectsOfType<GameObject>();
-        JointsOn = System.Array.FindAll(JointsOn, obj => obj.layer == LayerMask.NameToLayer("Muscle"));
+        JointsOff = GameObject.FindGameObjectsWithTag("NonMoveable");
+        JointsOn = GameObject.FindGameObjectsWithTag("Moveable");
     }
 
     void RagdollmodeOn()
     {
-        foreach (Collider col in RagdollColliders)
-        {
-            col.enabled = true;
-        }
+        aimIK.enabled = false;
+        puppetMaster.pinWeight = 0;
+        puppetMaster.muscleWeight = 0f;
+        if (Chair is not null)
+            Chair.GetComponent<MeshCollider>().enabled = true;
 
-        foreach (Rigidbody rigid in LimbsRigidBodies)
-        {
-            rigid.isKinematic = false;
-        }
+        //foreach (Collider col in RagdollColliders)
+        //{
+        //    col.enabled = true;
+        //}
+
+        //foreach (Rigidbody rigid in LimbsRigidBodies)
+        //{
+        //    rigid.isKinematic = false;
+        //}
     }
 
     void RagdollModeOff()
@@ -84,6 +93,7 @@ public class AnimationChooser : MonoBehaviour
         Animator = GetComponent<Animator>();
         GetRagdollElements();
         RagdollModeOff();
+
     }
 
     // Update is called once per frame
@@ -142,7 +152,7 @@ public class AnimationChooser : MonoBehaviour
                 }
                 else
                 {
-                    if(gameObject.tag == "2Joints")
+                    if (gameObject.tag == "2Joints")
                     {
                         if (Target2.transform.position.y < minJointHeightTarget2Check2 || Target2.transform.position.y > maxJointHeightTarget2Check2)
                         {
@@ -165,11 +175,11 @@ public class AnimationChooser : MonoBehaviour
                     }
                 }
             }
-            
+
 
             TurnOffJoints();
 
-            
+
 
         }
         if (Animator.GetCurrentAnimatorStateInfo(0).IsName(AnimationName))
@@ -183,6 +193,7 @@ public class AnimationChooser : MonoBehaviour
     IEnumerator AnimationOff()
     {
         yield return new WaitForSeconds(FallDelay);
+        print("Now");
         Animator.enabled = false;
         RagdollmodeOn();
     }
@@ -199,12 +210,12 @@ public class AnimationChooser : MonoBehaviour
 
     void TurnOffJoints()
     {
-        foreach( GameObject obj in JointsOff)
+        foreach (GameObject obj in JointsOff)
         {
             obj.GetComponent<MeshRenderer>().enabled = false;
         }
 
-        foreach ( GameObject obj in JointsOn)
+        foreach (GameObject obj in JointsOn)
         {
             obj.GetComponent<MeshRenderer>().enabled = false;
         }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Moveable
   - 2Joints
+  - NonMoveable
   layers:
   - Default
   - TransparentFX
