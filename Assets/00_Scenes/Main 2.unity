@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4470036, g: 0.4968962, b: 0.5750635, a: 1}
+  m_IndirectSpecularColor: {r: 0.44443998, g: 0.4936388, b: 0.5724695, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -720,7 +720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &40221077
 Transform:
   m_ObjectHideFlags: 0
@@ -2139,7 +2139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &234308158
 Transform:
   m_ObjectHideFlags: 0
@@ -3619,7 +3619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muscleMover:
-  - {fileID: 1659922061}
+  - {fileID: 0}
 --- !u!1 &328104384
 GameObject:
   m_ObjectHideFlags: 0
@@ -4359,7 +4359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &408746941
 Transform:
   m_ObjectHideFlags: 0
@@ -4922,7 +4922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &501516659
 Transform:
   m_ObjectHideFlags: 0
@@ -5865,7 +5865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &586536441
 Transform:
   m_ObjectHideFlags: 0
@@ -6305,7 +6305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &652493273
 Transform:
   m_ObjectHideFlags: 0
@@ -6526,7 +6526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &673724636
 Transform:
   m_ObjectHideFlags: 0
@@ -9309,7 +9309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &901051318
 Transform:
   m_ObjectHideFlags: 0
@@ -9966,7 +9966,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &962767733
 Transform:
   m_ObjectHideFlags: 0
@@ -14567,7 +14567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1399265752
 Transform:
   m_ObjectHideFlags: 0
@@ -14690,7 +14690,6 @@ MonoBehaviour:
   Target: {fileID: 654104458}
   Target2: {fileID: 0}
   puppetMaster: {fileID: 0}
-  aimIK: {fileID: 0}
   AnimationType: StandUp2
   AnimationName: Stand Up
   Chair: {fileID: 0}
@@ -16714,7 +16713,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1657021191
 Transform:
   m_ObjectHideFlags: 0
@@ -16844,7 +16843,6 @@ GameObject:
   - component: {fileID: 1659922060}
   - component: {fileID: 1659922059}
   - component: {fileID: 1659922058}
-  - component: {fileID: 1659922061}
   - component: {fileID: 1659922062}
   m_Layer: 6
   m_Name: Sphere (2)
@@ -16862,7 +16860,7 @@ Transform:
   m_GameObject: {fileID: 1659922056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16, y: 0.16, z: 0.16}
+  m_LocalScale: {x: 0.13, y: 0.13, z: 0.13}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1903328365}
@@ -16939,26 +16937,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659922056}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1659922061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659922056}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d10d23d61c537914f8ea04a1ab5f18fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Target: {fileID: 2124253229}
-  MuscleSphere: {fileID: 1659922057}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 64
-  MoveableJoints: []
-  otherTarget: {fileID: 0}
-  isHolding: 0
 --- !u!114 &1659922062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16978,7 +16956,7 @@ MonoBehaviour:
   JointMat: {fileID: 0}
   otherJoints: []
   otherSliders: []
-  newMat: {fileID: 2100000, guid: 9c67a5fe848b07b4fbb43599c6a31534, type: 2}
+  newMat: {fileID: 2100000, guid: 26d27cefa6a9c134daa79bfd702197fa, type: 2}
 --- !u!1 &1660895867
 GameObject:
   m_ObjectHideFlags: 0
@@ -17235,16 +17213,15 @@ MonoBehaviour:
   Target: {fileID: 2124253225}
   Target2: {fileID: 0}
   puppetMaster: {fileID: 718742153}
-  aimIK: {fileID: 1736176887}
   AnimationType: StandUp
   AnimationName: 
   Chair: {fileID: 514317133}
-  minJointHeight: 0.627
-  maxJointHeight: 0.86
+  minJointHeight: -0.25
+  maxJointHeight: 0.855
   minJointHeightTarget2: 1
   maxJointHeightTarget2: 1.2
-  minJointHeightCheck2: 1.3
-  maxJointHeightCheck2: 1.4
+  minJointHeightCheck2: 1.2
+  maxJointHeightCheck2: 1.67
   minJointHeightTarget2Check2: 1
   maxJointHeightTarget2Check2: 1.26
   FallDelay: 1
@@ -18233,7 +18210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1876393334
 Transform:
   m_ObjectHideFlags: 0
@@ -20280,7 +20257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2060457557
 Transform:
   m_ObjectHideFlags: 0
@@ -20844,7 +20821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2071506881
 Transform:
   m_ObjectHideFlags: 0
@@ -21363,7 +21340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2133736336
 Transform:
   m_ObjectHideFlags: 0

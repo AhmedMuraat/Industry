@@ -55,4 +55,10 @@ public class SliderActivator : MonoBehaviour
             slider.SetActive(false);
         }
     }
+
+    public void SliderOff()
+    {
+        Slider.SetActive(false);
+
+    }
 }
