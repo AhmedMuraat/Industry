@@ -13,7 +13,6 @@ public class AnimationChooser : MonoBehaviour
     public GameObject Target;
     public GameObject Target2;
     public PuppetMaster puppetMaster;
-    public LookAtIK aimIK;
     public string AnimationType;
     public string AnimationName;
 
@@ -49,7 +48,8 @@ public class AnimationChooser : MonoBehaviour
 
     void RagdollmodeOn()
     {
-        aimIK.enabled = false;
+        Animator.enabled = false;
+
         puppetMaster.pinWeight = 0;
         puppetMaster.muscleWeight = 0f;
         if (Chair is not null)
@@ -195,7 +195,6 @@ public class AnimationChooser : MonoBehaviour
     {
         yield return new WaitForSeconds(FallDelay);
         print("Now");
-        Animator.enabled = false;
         RagdollmodeOn();
     }
 
