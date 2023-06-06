@@ -36,7 +36,10 @@ public class AnimationChooser : MonoBehaviour
     public bool FirstCheck = true;
     public bool SecondCheck = false;
 
-
+    public LookAtIK lookAt1;
+    public LookAtController lookAt1C;
+    public LookAtIK lookAt2;
+    public LookAtController lookAt2C;
 
     void GetRagdollElements()
     {
@@ -171,8 +174,10 @@ public class AnimationChooser : MonoBehaviour
                     }
                     else
                     {
+                        End();
+
                         Debug.Log("Good posture");
-                        Animator.speed = 1f;
+
                     }
                 }
             }
@@ -190,7 +195,16 @@ public class AnimationChooser : MonoBehaviour
 
         }
     }
+    void End()
+    {
+        Animator.speed = 1f;
+        Animator.SetTrigger("Done");
+        lookAt1.enabled = false;
+        lookAt1C.enabled = false;
+        lookAt2.enabled = false;
+        lookAt2C.enabled = false;
 
+    }
     IEnumerator AnimationOff()
     {
         yield return new WaitForSeconds(FallDelay);
