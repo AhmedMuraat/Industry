@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -41,5 +42,9 @@ public class LevelManager : MonoBehaviour
         IsPaused = false;
         animationChooser.StartStandingUp = true;
 
+    }
+    public void NextScene()
+    {
+        SceneManager.LoadScene("Level 2");
     }
 }

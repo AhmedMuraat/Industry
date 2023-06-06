@@ -35,7 +35,7 @@ public class AnimationChooser : MonoBehaviour
 
     public bool FirstCheck = true;
     public bool SecondCheck = false;
-
+    public LevelCompletion levelcompleted;
     public LookAtIK lookAt1;
     public LookAtController lookAt1C;
     public LookAtIK lookAt2;
@@ -112,7 +112,9 @@ public class AnimationChooser : MonoBehaviour
                 {
                     StartCoroutine(AnimationOff());
                     Debug.Log("Bad posture");
-                    Debug.Log(Target2.transform.position.y);
+                    StartCoroutine(Failed());
+
+
                 }
                 else
                 {
@@ -122,14 +124,14 @@ public class AnimationChooser : MonoBehaviour
                         {
                             StartCoroutine(AnimationOff());
                             Debug.Log("Bad posture");
-                            Debug.Log(Target2.transform.position.y);
+                            StartCoroutine(Succeed());
                         }
                         else
                         {
                             Debug.Log("Good posture");
-
                             StartCoroutine(PauseAnimation());
                             Debug.Log(Target2.transform.position.y);
+
                         }
                     }
                     else
@@ -153,6 +155,8 @@ public class AnimationChooser : MonoBehaviour
                     Debug.Log("Bad posture");
                     Animator.enabled = false;
                     RagdollmodeOn();
+                    StartCoroutine(Failed());
+
                 }
                 else
                 {
@@ -164,12 +168,15 @@ public class AnimationChooser : MonoBehaviour
                             //print(Target2.transform.position.y);
                             Animator.enabled = false;
                             RagdollmodeOn();
+                            StartCoroutine(Failed());
                         }
                         else
                         {
                             Debug.Log("Good posture");
                             Animator.speed = 1f;
                             gameObject.GetComponent<RigBuilder>().enabled = false;
+                            StartCoroutine(Succeed());
+
                         }
                     }
                     else
@@ -177,6 +184,8 @@ public class AnimationChooser : MonoBehaviour
                         End();
 
                         Debug.Log("Good posture");
+                        StartCoroutine(Succeed());
+
 
                     }
                 }
@@ -199,12 +208,29 @@ public class AnimationChooser : MonoBehaviour
     {
         Animator.speed = 1f;
         Animator.SetTrigger("Done");
-        lookAt1.enabled = false;
-        lookAt1C.enabled = false;
-        lookAt2.enabled = false;
-        lookAt2C.enabled = false;
+        if (lookAt1 is not null)
+        {
+
+            lookAt1.enabled = false;
+            lookAt1C.enabled = false;
+            lookAt2.enabled = false;
+            lookAt2C.enabled = false;
+        }
 
     }
+    IEnumerator Failed()
+    {
+        yield return new WaitForSeconds(2);
+
+        levelcompleted.Failedscreen();
+    }
+    IEnumerator Succeed()
+    {
+        yield return new WaitForSeconds(2);
+
+        levelcompleted.Completionscreen();
+    }
+
     IEnumerator AnimationOff()
     {
         yield return new WaitForSeconds(FallDelay);

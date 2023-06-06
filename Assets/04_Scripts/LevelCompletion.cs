@@ -12,8 +12,6 @@ public class LevelCompletion : MonoBehaviour
     {
 
         completionScreen.SetActive(true);
-
-
     }
 
     public void Failedscreen()
