@@ -107,7 +107,7 @@ public class AnimationChooser : MonoBehaviour
             StartStandingUp = false;
             if (FirstCheck)
             {
-                Animator.SetTrigger(AnimationType);
+                Animator.SetTrigger("Start");
                 if (Target.transform.position.y > maxJointHeight || Target.transform.position.y < minJointHeight)
                 {
                     StartCoroutine(AnimationOff());
@@ -207,7 +207,6 @@ public class AnimationChooser : MonoBehaviour
     void End()
     {
         Animator.speed = 1f;
-        Animator.SetTrigger("Done");
         if (lookAt1 is not null)
         {
 
