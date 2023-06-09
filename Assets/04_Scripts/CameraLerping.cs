@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CameraLerping : MonoBehaviour
@@ -21,6 +22,8 @@ public class CameraLerping : MonoBehaviour
     public Button Left;
     public int CurrentLevelIndex = 0;
 
+    public bool ResetSaves;
+
     Camera _mainCamera;
     bool StartMoving;
     float nextTime;
@@ -37,6 +40,11 @@ public class CameraLerping : MonoBehaviour
         {
             StartPositionCharacter.Add(LevelAnimation[i].gameObject.transform.position);
             StartRotationCharacter.Add(LevelAnimation[i].gameObject.transform.rotation);
+        }
+        int totalLevelsUnlocked = PlayerPrefs.GetInt("UnlockedLevel");
+        for (int i = 0; i <= totalLevelsUnlocked; i++)
+        {
+            LevelUnlocked[i] = true;
         }
 
         _mainCamera = Camera.main;
@@ -75,6 +83,12 @@ public class CameraLerping : MonoBehaviour
             Left.interactable = true;
             Right.interactable = true;
         }
+
+        if (ResetSaves)
+        {
+            ResetSaves = false;
+            PlayerPrefs.DeleteKey("UnlockedLevel");
+        }
     }
 
     void LerpTo(Transform to)
@@ -92,6 +106,9 @@ public class CameraLerping : MonoBehaviour
             Slot.SetActive(true);
             Play.interactable = false;
         }
+
+        Play.onClick.RemoveAllListeners();
+        Play.onClick.AddListener(() => GoToLevel(CurrentLevelIndex + 1));
 
         _mainCamera.transform.position = Vector3.Lerp(_mainCamera.transform.position, to.position, Speed);
         _mainCamera.transform.rotation = Quaternion.Lerp(_mainCamera.transform.rotation, to.rotation, Speed);
@@ -129,4 +146,9 @@ public class CameraLerping : MonoBehaviour
         CurrentLevelIndex--;
         StartMoving = true;
     }
+    public void GoToLevel(int levelNumber)
+    {
+        SceneManager.LoadScene("Level " + levelNumber.ToString());
+    }
+
 }
