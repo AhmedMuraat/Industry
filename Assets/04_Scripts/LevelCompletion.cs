@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelCompletion : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class LevelCompletion : MonoBehaviour
 
     public void Completionscreen()
     {
+        int id = int.Parse(SceneManager.GetActiveScene().name.Split(" ")[1]);
+
+        PlayerPrefs.SetInt("UnlockedLevel", id);
+        PlayerPrefs.Save();
 
         completionScreen.SetActive(true);
     }

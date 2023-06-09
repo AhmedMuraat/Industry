@@ -9,7 +9,7 @@ AnimatorController:
   m_Name: Humanoid Baker Clip Sampler
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: StandUp
+  - m_Name: Start
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -42,7 +42,7 @@ AnimatorStateMachine:
     m_Position: {x: -200, y: 30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5405566991205913186}
-    m_Position: {x: 50, y: 20, z: 0}
+    m_Position: {x: 30, y: 20, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 8280949263625789229}
@@ -116,7 +116,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: StandUp
+    m_ConditionEvent: Start
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2074761433859907104}
