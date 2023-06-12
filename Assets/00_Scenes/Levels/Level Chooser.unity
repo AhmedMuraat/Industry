@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44443998, g: 0.4936388, b: 0.5724695, a: 1}
+  m_IndirectSpecularColor: {r: 0.4470036, g: 0.4968962, b: 0.5750635, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1495,12 +1495,13 @@ MonoBehaviour:
   - {fileID: 385534917}
   Title: {fileID: 1002951198}
   Description: {fileID: 267914513}
-  Speed: 0.02
+  Speed: 0.08
   Play: {fileID: 1848196064}
   Slot: {fileID: 1616027217}
   Right: {fileID: 2059028388}
   Left: {fileID: 1573559438}
   CurrentLevelIndex: 0
+  ResetSaves: 0
 --- !u!4 &207999062
 Transform:
   m_ObjectHideFlags: 0
