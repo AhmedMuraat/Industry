@@ -112,8 +112,9 @@ public class CameraLerping : MonoBehaviour
 
         _mainCamera.transform.position = Vector3.Lerp(_mainCamera.transform.position, to.position, Speed);
         _mainCamera.transform.rotation = Quaternion.Lerp(_mainCamera.transform.rotation, to.rotation, Speed);
-
-        if (Vector3.Distance(_mainCamera.transform.position, to.position) < 0.1f)
+        float angel = Quaternion.Angle(_mainCamera.transform.rotation, to.rotation);
+        float distance = Vector3.Distance(_mainCamera.transform.position, to.position);
+        if (distance < 0.1f && angel < 0.1f)
         {
             StartAnimationLevel();
             StartMoving = false;
@@ -125,7 +126,7 @@ public class CameraLerping : MonoBehaviour
         LevelAnimation[CurrentLevelIndex].SetTrigger("Start");
         if (CurrentLevelIndex == 0)
         {
-            LevelAnimation[CurrentLevelIndex].gameObject.transform.position = new Vector3(StartPositionCharacter[CurrentLevelIndex].x, 0.3f, StartPositionCharacter[CurrentLevelIndex].z);
+            LevelAnimation[CurrentLevelIndex].gameObject.transform.position = new Vector3(StartPositionCharacter[CurrentLevelIndex].x, 0, StartPositionCharacter[CurrentLevelIndex].z);
             LevelAnimation[CurrentLevelIndex].gameObject.transform.rotation = StartRotationCharacter[CurrentLevelIndex];
             return;
         }
