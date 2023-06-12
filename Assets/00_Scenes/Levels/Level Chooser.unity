@@ -1619,7 +1619,7 @@ MonoBehaviour:
   - {fileID: 385534917}
   Title: {fileID: 1002951198}
   Description: {fileID: 267914513}
-  Speed: 0.02
+  Speed: 0.08
   Play: {fileID: 1848196064}
   Slot: {fileID: 1616027217}
   Right: {fileID: 2059028388}
