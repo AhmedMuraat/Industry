@@ -4986,7 +4986,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae0a848d1b89e545b84f55c5da2f0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muscleMover: {fileID: 7991123738647352838}
+  muscleMover:
+  - {fileID: 0}
 --- !u!1 &7991123739124862777
 GameObject:
   m_ObjectHideFlags: 0
@@ -7071,7 +7072,7 @@ Transform:
   m_GameObject: {fileID: 7991123739668873026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.925596, y: -3.4308956, z: -10.488678}
-  m_LocalScale: {x: -0.85049576, y: 0.85049576, z: 0.85049576}
+  m_LocalScale: {x: -0.8504958, y: 0.85049576, z: 0.85049576}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7991123739076943063}
@@ -11333,8 +11334,10 @@ MonoBehaviour:
   FullRig: {fileID: 7991123740239300838}
   Target: {fileID: 7991123738404331891}
   Target2: {fileID: 0}
+  puppetMaster: {fileID: 0}
   AnimationType: StandUp2
   AnimationName: Stand Up
+  Chair: {fileID: 0}
   minJointHeight: 0.627
   maxJointHeight: 0.86
   minJointHeightTarget2: 1
@@ -11347,6 +11350,11 @@ MonoBehaviour:
   KeyframeDelay: 1.5
   FirstCheck: 1
   SecondCheck: 0
+  levelcompleted: {fileID: 0}
+  lookAt1: {fileID: 0}
+  lookAt1C: {fileID: 0}
+  lookAt2: {fileID: 0}
+  lookAt2C: {fileID: 0}
   StartStandingUp: 0
 --- !u!114 &7991123740239300826
 MonoBehaviour:
