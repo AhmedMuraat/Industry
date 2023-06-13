@@ -561,8 +561,8 @@ MonoBehaviour:
   YBot: {fileID: 1736176881}
   Camera: {fileID: 327255944}
   Background: {fileID: 1334897880}
-  BackgroundStartColor: {r: 0, g: 0, b: 0, a: 0}
-  FillStartColor: {r: 0, g: 0, b: 0, a: 0}
+  BackgroundStartColor: {r: 0, g: 0.63529414, b: 0.6431373, a: 1}
+  FillStartColor: {r: 0, g: 0.90588236, b: 0.8392157, a: 1}
   Fill: {fileID: 1002791944}
   AnimationPlaying: 0
   isRotating: 0
