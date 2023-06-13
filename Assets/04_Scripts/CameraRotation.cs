@@ -13,6 +13,7 @@ public class CameraRotation : MonoBehaviour
     public Quaternion startPos;
     public float TimeElapsed = 0;
     public float LerpDuration = 10;
+    public bool isRotating = false;
 
 
     //Start is called before the first frame update
@@ -29,9 +30,11 @@ public class CameraRotation : MonoBehaviour
         {
             transform.rotation = Quaternion.Lerp(startPos, Target, TimeElapsed / LerpDuration);
             TimeElapsed += Time.deltaTime;
+            isRotating = true;
         }
         else
         {
+            isRotating = false;
             if (Input.touchCount == 1)
             {
                 for (int i = 0; i < muscleMover.Length; i++)
@@ -51,7 +54,7 @@ public class CameraRotation : MonoBehaviour
             }
         }
 
-        Debug.Log(transform.rotation);
+        
        
 
     }

@@ -6876,6 +6876,7 @@ GameObject:
   - component: {fileID: 753132845}
   - component: {fileID: 753132846}
   - component: {fileID: 753132847}
+  - component: {fileID: 753132848}
   m_Layer: 5
   m_Name: SliderHip
   m_TagString: Untagged
@@ -7019,6 +7020,26 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &753132848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753132843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2885bf69d1ea713409c120a05f6936be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  YBot: {fileID: 1736176881}
+  Camera: {fileID: 314662833563187169}
+  Background: {fileID: 104781632}
+  BackgroundStartColor: {r: 0, g: 0.63529414, b: 0.6431373, a: 1}
+  FillStartColor: {r: 0, g: 0.90588236, b: 0.8392157, a: 1}
+  Fill: {fileID: 1382614338}
+  AnimationPlaying: 0
+  isRotating: 0
 --- !u!1 &757607924
 GameObject:
   m_ObjectHideFlags: 0
@@ -13922,6 +13943,7 @@ GameObject:
   - component: {fileID: 1817147613}
   - component: {fileID: 1817147612}
   - component: {fileID: 1817147611}
+  - component: {fileID: 1817147614}
   m_Layer: 5
   m_Name: SliderKnee
   m_TagString: Untagged
@@ -14065,6 +14087,26 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1817147614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817147609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2885bf69d1ea713409c120a05f6936be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  YBot: {fileID: 1736176881}
+  Camera: {fileID: 314662833563187169}
+  Background: {fileID: 531617027}
+  BackgroundStartColor: {r: 1, g: 1, b: 0, a: 1}
+  FillStartColor: {r: 0.64705884, g: 0.6509804, b: 0, a: 1}
+  Fill: {fileID: 1044821519}
+  AnimationPlaying: 0
+  isRotating: 0
 --- !u!1 &1840290271
 GameObject:
   m_ObjectHideFlags: 0
@@ -18032,6 +18074,12 @@ MonoBehaviour:
   muscleMover:
   - {fileID: 568732795}
   - {fileID: 1942330294}
+  mainCamera: {fileID: 0}
+  Target: {x: 0, y: 0.7166, z: 0, w: 0.6974}
+  startPos: {x: 0, y: 0, z: 0, w: 0}
+  TimeElapsed: 0
+  LerpDuration: 2
+  isRotating: 0
 --- !u!4 &314662833572070161
 Transform:
   m_ObjectHideFlags: 0
@@ -36757,7 +36805,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   YBot: {fileID: 1736176881}
+  Camera: {fileID: 314662833563187169}
   AnimationPlaying: 0
+  isRotating: 0
 --- !u!23 &7324165563973591362
 MeshRenderer:
   m_ObjectHideFlags: 0

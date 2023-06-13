@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class AvailabilityCheck : MonoBehaviour
 {
     public GameObject YBot;
+    public GameObject Camera;
     public bool AnimationPlaying;
+    public bool isRotating;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +19,14 @@ public class AvailabilityCheck : MonoBehaviour
     void Update()
     {
         AnimationPlaying = YBot.GetComponent<AnimationChooser>().AnimationPlaying;
+        isRotating = Camera.GetComponent<CameraRotation>().isRotating;
 
         if (AnimationPlaying == true)
+        {
+            gameObject.GetComponent<Image>().color = new Color32(90, 90, 90, 0xFF);
+            gameObject.GetComponent<Button>().interactable = false;
+        }
+        else if (isRotating == true)
         {
             gameObject.GetComponent<Image>().color = new Color32(90, 90, 90, 0xFF);
             gameObject.GetComponent<Button>().interactable = false;

@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 9456956}
   - component: {fileID: 9456955}
   - component: {fileID: 9456954}
+  - component: {fileID: 9456957}
   m_Layer: 5
   m_Name: SliderHip
   m_TagString: Untagged
@@ -545,6 +546,26 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9456957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9456952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2885bf69d1ea713409c120a05f6936be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  YBot: {fileID: 1736176881}
+  Camera: {fileID: 327255944}
+  Background: {fileID: 1334897880}
+  BackgroundStartColor: {r: 0, g: 0, b: 0, a: 0}
+  FillStartColor: {r: 0, g: 0, b: 0, a: 0}
+  Fill: {fileID: 1002791944}
+  AnimationPlaying: 0
+  isRotating: 0
 --- !u!1 &12336809
 GameObject:
   m_ObjectHideFlags: 0
@@ -4124,6 +4145,7 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0, w: 0}
   TimeElapsed: 0
   LerpDuration: 2
+  isRotating: 0
 --- !u!1 &328104384
 GameObject:
   m_ObjectHideFlags: 0
@@ -23643,7 +23665,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   YBot: {fileID: 1736176881}
+  Camera: {fileID: 327255944}
   AnimationPlaying: 0
+  isRotating: 0
 --- !u!224 &7205335605791584343
 RectTransform:
   m_ObjectHideFlags: 0
