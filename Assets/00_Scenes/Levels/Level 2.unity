@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44443998, g: 0.4936388, b: 0.5724695, a: 1}
+  m_IndirectSpecularColor: {r: 0.4470036, g: 0.4968962, b: 0.5750635, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3365,6 +3365,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591568119735091974, guid: 0032af316939a6d4da029c8ecd8d509c,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.92941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591568119735091974, guid: 0032af316939a6d4da029c8ecd8d509c,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.58431375
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591568119735091974, guid: 0032af316939a6d4da029c8ecd8d509c,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.39215687
       objectReference: {fileID: 0}
     - target: {fileID: 8591568119735091977, guid: 0032af316939a6d4da029c8ecd8d509c,
         type: 3}
@@ -11554,6 +11569,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406808702581685971, guid: 3eeaabc29e2614b4fa4552dec1471e3e,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.92941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406808702581685971, guid: 3eeaabc29e2614b4fa4552dec1471e3e,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.58431375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406808702581685971, guid: 3eeaabc29e2614b4fa4552dec1471e3e,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.39215687
       objectReference: {fileID: 0}
     - target: {fileID: 5406808702581685974, guid: 3eeaabc29e2614b4fa4552dec1471e3e,
         type: 3}
@@ -34727,13 +34757,13 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 988622202, guid: addce6f328f1f4d40b8012cf2b6d01dc,
+    m_HighlightedSprite: {fileID: -945646639, guid: 950de8c246f1c2f48b65fa44c3d5865e,
       type: 3}
-    m_PressedSprite: {fileID: 1698750737, guid: addce6f328f1f4d40b8012cf2b6d01dc,
+    m_PressedSprite: {fileID: -1312612787, guid: 950de8c246f1c2f48b65fa44c3d5865e,
       type: 3}
-    m_SelectedSprite: {fileID: 988622202, guid: addce6f328f1f4d40b8012cf2b6d01dc,
+    m_SelectedSprite: {fileID: -945646639, guid: 950de8c246f1c2f48b65fa44c3d5865e,
       type: 3}
-    m_DisabledSprite: {fileID: 988622202, guid: addce6f328f1f4d40b8012cf2b6d01dc,
+    m_DisabledSprite: {fileID: -945646639, guid: 950de8c246f1c2f48b65fa44c3d5865e,
       type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -34783,14 +34813,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.39215687, g: 0.58431375, b: 0.92941177, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 988622202, guid: addce6f328f1f4d40b8012cf2b6d01dc, type: 3}
+  m_Sprite: {fileID: -945646639, guid: 950de8c246f1c2f48b65fa44c3d5865e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
