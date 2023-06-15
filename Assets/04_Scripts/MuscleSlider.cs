@@ -9,13 +9,13 @@ public class MuscleSlider : MonoBehaviour
 
     public GameObject slider;
     public float sliderValue;
-    public Transform Target;
+    public List<Transform> Target = new List<Transform>();
     public GameObject Camera;
     public float directionMultiplier;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -23,11 +23,14 @@ public class MuscleSlider : MonoBehaviour
     {
         sliderValue = slider.gameObject.GetComponent<Slider>().value;
         print(sliderValue);
+        for (int i = 0; i < Target.Count; i++)
+        {
 
-        Vector3 newPosition = Target.position;
-        newPosition.y = sliderValue * directionMultiplier;
+            Vector3 newPosition = Target[i].position;
+            newPosition.y = sliderValue * directionMultiplier;
 
-        Target.position = newPosition;
+            Target[i].position = newPosition;
+        }
     }
 
     public void OnSliderPress()

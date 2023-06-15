@@ -945,7 +945,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.09123871, y: -0.06657191, z: -0.0005540268}
+  m_ConnectedAnchor: {x: -0.09123874, y: -0.06657197, z: -0.00055392785}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 0, z: 1}
   m_XMotion: 0
@@ -1161,7 +1161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180364675}
   m_LocalRotation: {x: -0.060730223, y: -0.000000022984032, z: -0.0000058700066, w: 0.9981542}
-  m_LocalPosition: {x: -0.000008597855, y: 0.09923462, z: -0.012273348}
+  m_LocalPosition: {x: -0, y: 0.104, z: -0.012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1284,7 +1284,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.000000012572855, y: 0.42099023, z: -0.0000000055879354}
+  m_ConnectedAnchor: {x: 0.000000020954758, y: 0.4209903, z: -0.000000115484}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -1877,7 +1877,7 @@ MonoBehaviour:
   Slider: {fileID: 1817147609}
   JointMat: {fileID: 0}
   otherJoints:
-  - {fileID: 586536440}
+  - {fileID: 673724635}
   otherSliders:
   - {fileID: 753132843}
   newMat: {fileID: 2100000, guid: 26d27cefa6a9c134daa79bfd702197fa, type: 2}
@@ -2305,7 +2305,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.1876076, y: 0.22466102, z: -0.008129191}
+  m_ConnectedAnchor: {x: -0.18760757, y: 0.22466101, z: -0.008129154}
   serializedVersion: 3
   m_SecondaryAxis: {x: -1, y: 0, z: 0}
   m_XMotion: 0
@@ -2445,7 +2445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297248861}
   m_LocalRotation: {x: -0.5293329, y: -0.52936757, z: 0.4687932, w: -0.4688387}
-  m_LocalPosition: {x: 0.18760838, y: 0.22468995, z: -0.0081232535}
+  m_LocalPosition: {x: 0.18760838, y: 0.22468998, z: -0.00812349}
   m_LocalScale: {x: 0.9999999, y: 1, z: 0.9999999}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2492,7 +2492,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.1876084, y: 0.22469011, z: -0.00812344}
+  m_ConnectedAnchor: {x: 0.18760838, y: 0.22468998, z: -0.00812349}
   serializedVersion: 3
   m_SecondaryAxis: {x: -1, y: 0, z: 0}
   m_XMotion: 0
@@ -2978,7 +2978,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000031664968, y: 0.40599445, z: 0.0000000018626451}
+  m_ConnectedAnchor: {x: -0.0000000020954758, y: 0.40599447, z: -0.00000010617077}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 0, z: 1}
   m_XMotion: 0
@@ -3326,6 +3326,140 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382971824}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &386291947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 386291948}
+  - component: {fileID: 386291950}
+  - component: {fileID: 386291949}
+  m_Layer: 7
+  m_Name: AA_Spine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &386291948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386291947}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1736176882}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &386291949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386291947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8362d7c66e966dd498d59b31392d5148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ik: {fileID: 386291950}
+  target: {fileID: 1399041593}
+  weight: 1
+  offset: {x: 0, y: 0, z: 0}
+  targetSwitchSmoothTime: 0.3
+  weightSmoothTime: 0.3
+  smoothTurnTowardsTarget: 1
+  maxRadiansDelta: 3
+  maxMagnitudeDelta: 3
+  slerpSpeed: 3
+  pivotOffsetFromRoot: {x: 0, y: 1, z: 0}
+  minDistance: 1
+  maxRootAngle: 45
+--- !u!114 &386291950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386291947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776adaaacdc5c4e8ab0395120a6e972b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixTransforms: 1
+  solver:
+    executedInEditor: 0
+    IKPosition: {x: 0.5259906, y: 1.4019186, z: -6.7200007}
+    IKPositionWeight: 1
+    root: {fileID: 386291948}
+    target: {fileID: 1399041593}
+    spine:
+    - transform: {fileID: 180364676}
+      weight: 0
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 0}
+      defaultLocalPosition: {x: -0, y: 0.104, z: -0.012}
+      defaultLocalRotation: {x: -0.060730223, y: -0.000000022984032, z: -0.0000058700066,
+        w: 0.9981542}
+      length: 0
+      sqrMag: 0
+      axis: {x: -0.0000027473961, y: -0.12123626, z: 0.9926237}
+      baseForwardOffsetEuler: {x: 0, y: 0, z: 0}
+    head:
+      transform: {fileID: 180364676}
+      weight: 1
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 1}
+      defaultLocalPosition: {x: -0, y: 0.104, z: -0.012}
+      defaultLocalRotation: {x: -0.060730223, y: -0.000000022984032, z: -0.0000058700066,
+        w: 0.9981542}
+      length: 0
+      sqrMag: 0
+      axis: {x: -0.0000027473961, y: -0.12123626, z: 0.9926237}
+      baseForwardOffsetEuler: {x: 0, y: 0, z: 0}
+    eyes: []
+    bodyWeight: 0.5
+    headWeight: 0.5
+    eyesWeight: 1
+    clampWeight: 0.5
+    clampWeightHead: 0.5
+    clampWeightEyes: 0.5
+    clampSmoothing: 2
+    spineWeightCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    spineTargetOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &394244379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3708,6 +3842,138 @@ Transform:
   m_Father: {fileID: 874231810}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &460172360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 460172361}
+  - component: {fileID: 460172363}
+  - component: {fileID: 460172362}
+  m_Layer: 7
+  m_Name: AA_Arm2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &460172361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460172360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1736176882}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &460172362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460172360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8362d7c66e966dd498d59b31392d5148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ik: {fileID: 460172363}
+  target: {fileID: 1399041593}
+  weight: 1
+  offset: {x: 0, y: 0, z: 0}
+  targetSwitchSmoothTime: 0.3
+  weightSmoothTime: 0.3
+  smoothTurnTowardsTarget: 1
+  maxRadiansDelta: 3
+  maxMagnitudeDelta: 3
+  slerpSpeed: 3
+  pivotOffsetFromRoot: {x: 0, y: 1, z: 0}
+  minDistance: 1
+  maxRootAngle: 45
+--- !u!114 &460172363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460172360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776adaaacdc5c4e8ab0395120a6e972b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixTransforms: 1
+  solver:
+    executedInEditor: 0
+    IKPosition: {x: 0.33835292, y: 1.7404196, z: -6.670559}
+    IKPositionWeight: 1
+    root: {fileID: 460172361}
+    target: {fileID: 1399041593}
+    spine:
+    - transform: {fileID: 1251759724}
+      weight: 0
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 0}
+      defaultLocalPosition: {x: -3.913536e-17, y: 0.12922287, z: -8.437695e-17}
+      defaultLocalRotation: {x: -0.010435484, y: -0.0010612743, z: 0.101149864, w: 0.9948159}
+      length: 0
+      sqrMag: 0
+      axis: {x: -0.99999976, y: 0.0000008940697, z: 0.00000029802322}
+      baseForwardOffsetEuler: {x: 0, y: 0, z: 0}
+    head:
+      transform: {fileID: 1251759724}
+      weight: 1
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 1}
+      defaultLocalPosition: {x: -3.913536e-17, y: 0.12922287, z: -8.437695e-17}
+      defaultLocalRotation: {x: -0.010435484, y: -0.0010612743, z: 0.101149864, w: 0.9948159}
+      length: 0
+      sqrMag: 0
+      axis: {x: -0.99999976, y: 0.0000008940697, z: 0.00000029802322}
+      baseForwardOffsetEuler: {x: 0, y: 0, z: 0}
+    eyes: []
+    bodyWeight: 0.5
+    headWeight: 0.5
+    eyesWeight: 1
+    clampWeight: 0.5
+    clampWeightHead: 0.5
+    clampWeightEyes: 0.5
+    clampSmoothing: 2
+    spineWeightCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    spineTargetOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &468327918
 GameObject:
   m_ObjectHideFlags: 0
@@ -3967,7 +4233,7 @@ GameObject:
   - component: {fileID: 533404606}
   - component: {fileID: 533404605}
   m_Layer: 7
-  m_Name: AA_Knee
+  m_Name: AA_Knee1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3997,43 +4263,66 @@ MonoBehaviour:
   m_GameObject: {fileID: 533404603}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8362d7c66e966dd498d59b31392d5148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ik: {fileID: 533404606}
+  target: {fileID: 632919707}
+  weight: 1
+  offset: {x: 0, y: 0, z: 0}
+  targetSwitchSmoothTime: 0.3
+  weightSmoothTime: 0.3
+  smoothTurnTowardsTarget: 1
+  maxRadiansDelta: 3
+  maxMagnitudeDelta: 3
+  slerpSpeed: 3
+  pivotOffsetFromRoot: {x: 0, y: 1, z: 0}
+  minDistance: 1
+  maxRootAngle: 45
+--- !u!114 &533404606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533404603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 776adaaacdc5c4e8ab0395120a6e972b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fixTransforms: 1
   solver:
     executedInEditor: 0
-    IKPosition: {x: 0.43230855, y: 0.8254003, z: -7.1363044}
+    IKPosition: {x: 0.61969113, y: 0.8254004, z: -6.7262993}
     IKPositionWeight: 1
     root: {fileID: 533404604}
-    target: {fileID: 0}
+    target: {fileID: 632919707}
     spine:
-    - transform: {fileID: 241436986}
+    - transform: {fileID: 1433455053}
       weight: 0
       solverPosition: {x: 0, y: 0, z: 0}
       solverRotation: {x: 0, y: 0, z: 0, w: 0}
-      defaultLocalPosition: {x: -5.3290704e-17, y: 0.40599436, z: 2.664535e-16}
-      defaultLocalRotation: {x: -0.018147066, y: 0.00018249144, z: -0.0059201503,
-        w: 0.9998178}
+      defaultLocalPosition: {x: 4.796163e-16, y: 0.40599436, z: 1.1701751e-15}
+      defaultLocalRotation: {x: -0.018134093, y: -0.0001825504, z: 0.005920147, w: 0.999818}
       length: 0
       sqrMag: 0
-      axis: {x: 0.0000007027993, y: -0.04894404, z: 0.99880147}
+      axis: {x: 0.00000070160604, y: -0.048931167, z: 0.9988022}
       baseForwardOffsetEuler: {x: 0, y: 0, z: 0}
     head:
-      transform: {fileID: 241436986}
+      transform: {fileID: 1433455053}
       weight: 1
       solverPosition: {x: 0, y: 0, z: 0}
       solverRotation: {x: 0, y: 0, z: 0, w: 1}
-      defaultLocalPosition: {x: -5.3290704e-17, y: 0.40599436, z: 2.664535e-16}
-      defaultLocalRotation: {x: -0.018147066, y: 0.00018249144, z: -0.0059201503,
-        w: 0.9998178}
+      defaultLocalPosition: {x: 4.796163e-16, y: 0.40599436, z: 1.1701751e-15}
+      defaultLocalRotation: {x: -0.018134093, y: -0.0001825504, z: 0.005920147, w: 0.999818}
       length: 0
       sqrMag: 0
-      axis: {x: 0.0000007027993, y: -0.04894404, z: 0.99880147}
+      axis: {x: 0.00000070160604, y: -0.048931167, z: 0.9988022}
       baseForwardOffsetEuler: {x: 0, y: 0, z: 0}
     eyes: []
-    bodyWeight: 0.216
-    headWeight: 1
+    bodyWeight: 0.5
+    headWeight: 0.5
     eyesWeight: 1
     clampWeight: 0.5
     clampWeightHead: 0.5
@@ -4049,8 +4338,8 @@ MonoBehaviour:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       - serializedVersion: 3
         time: 1
         value: 1
@@ -4058,37 +4347,12 @@ MonoBehaviour:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     spineTargetOffset: {x: 0, y: 0, z: 0}
---- !u!114 &533404606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533404603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8362d7c66e966dd498d59b31392d5148, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ik: {fileID: 533404605}
-  target: {fileID: 632919707}
-  weight: 1
-  offset: {x: 0, y: 0, z: 0}
-  targetSwitchSmoothTime: 0.3
-  weightSmoothTime: 0.3
-  smoothTurnTowardsTarget: 1
-  maxRadiansDelta: 3
-  maxMagnitudeDelta: 3
-  slerpSpeed: 3
-  pivotOffsetFromRoot: {x: 0, y: 1, z: 0}
-  minDistance: 1
-  maxRootAngle: 45
 --- !u!1 &544049935
 GameObject:
   m_ObjectHideFlags: 0
@@ -4147,7 +4411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547385425}
   m_LocalRotation: {x: -0.06053449, y: 0.00000054163263, z: 0.000003428875, w: 0.99816614}
-  m_LocalPosition: {x: -0.000007274186, y: 0.21568912, z: -0.026496887}
+  m_LocalPosition: {x: -0.0000072741877, y: 0.21568912, z: -0.026496649}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4196,7 +4460,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0000072467083, y: 0.215689, z: -0.026496762}
+  m_ConnectedAnchor: {x: -0.0000072741877, y: 0.21568912, z: -0.026496649}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 0, z: 1}
   m_XMotion: 0
@@ -4647,7 +4911,7 @@ GameObject:
   - component: {fileID: 586536444}
   - component: {fileID: 586536443}
   - component: {fileID: 586536442}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Sphere (2)
   m_TagString: NonMoveable
   m_Icon: {fileID: 0}
@@ -4913,13 +5177,14 @@ GameObject:
   - component: {fileID: 632919707}
   - component: {fileID: 632919706}
   - component: {fileID: 632919705}
+  - component: {fileID: 632919708}
   m_Layer: 0
   m_Name: Target 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &632919705
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4978,13 +5243,77 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632919703}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.413, y: 1.14, z: -5.093}
+  m_LocalPosition: {x: 0.634, y: 1.14, z: -5.093}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &632919708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632919703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776adaaacdc5c4e8ab0395120a6e972b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixTransforms: 1
+  solver:
+    executedInEditor: 0
+    IKPosition: {x: 0.33835292, y: 1.7404196, z: -0.67055917}
+    IKPositionWeight: 1
+    root: {fileID: 632919707}
+    target: {fileID: 1399041593}
+    spine: []
+    head:
+      transform: {fileID: 0}
+      weight: 1
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 1}
+      defaultLocalPosition: {x: -3.913536e-17, y: 0.12922287, z: -8.437695e-17}
+      defaultLocalRotation: {x: -0.010435484, y: -0.0010612743, z: 0.101149864, w: 0.9948159}
+      length: 0
+      sqrMag: 0
+      axis: {x: 0.99999976, y: -0.0000008940697, z: -0.00000029802322}
+      baseForwardOffsetEuler: {x: 0, y: 0, z: 0}
+    eyes: []
+    bodyWeight: 0.5
+    headWeight: 0.5
+    eyesWeight: 1
+    clampWeight: 0.5
+    clampWeightHead: 0.5
+    clampWeightEyes: 0.5
+    clampSmoothing: 2
+    spineWeightCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    spineTargetOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &635326595
 GameObject:
   m_ObjectHideFlags: 0
@@ -5229,7 +5558,7 @@ GameObject:
   - component: {fileID: 673724638}
   - component: {fileID: 673724637}
   - component: {fileID: 673724640}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Sphere (1)
   m_TagString: Moveable
   m_Icon: {fileID: 0}
@@ -5591,7 +5920,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693312230}
   m_LocalRotation: {x: 5.654555e-27, y: -1.0587912e-22, z: -2.615043e-21, w: 1}
-  m_LocalPosition: {x: 0.0000011343366, y: 0.38151768, z: 0.06970504}
+  m_LocalPosition: {x: 0.0000011343388, y: 0.3815177, z: 0.0697048}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5610,7 +5939,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000011699672, y: 0.3815177, z: 0.069704846}
+  m_ConnectedAnchor: {x: 0.0000011343388, y: 0.3815177, z: 0.0697048}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 0, z: 1}
   m_XMotion: 0
@@ -6812,7 +7141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 753132843}
   sliderValue: 0
-  Target: {fileID: 1399041593}
+  Target: []
   Camera: {fileID: 314662833563187169}
   directionMultiplier: 1
 --- !u!114 &753132847
@@ -6921,7 +7250,7 @@ Transform:
   m_GameObject: {fileID: 779521938}
   m_LocalRotation: {x: 0.000000059604645, y: 0.00000017881395, z: 0.0000001192093,
     w: 1}
-  m_LocalPosition: {x: -0.00000024348947, y: 0.2761447, z: 0.00000018398978}
+  m_LocalPosition: {x: -0.0000000050654014, y: 0.27614468, z: 0.00000018299292}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6940,7 +7269,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000011167541, y: 0.27614465, z: 0.00000014684468}
+  m_ConnectedAnchor: {x: -0.0000000050654014, y: 0.2761448, z: 0.0000001830075}
   serializedVersion: 3
   m_SecondaryAxis: {x: -1, y: 0, z: 0}
   m_XMotion: 0
@@ -7701,7 +8030,7 @@ Transform:
   m_GameObject: {fileID: 860035649}
   m_LocalRotation: {x: 0.000000059604645, y: -0.00000017881395, z: -0.0000001192093,
     w: 1}
-  m_LocalPosition: {x: 0.00000055973277, y: 0.27614453, z: 0.00000009699178}
+  m_LocalPosition: {x: 0.000000082885244, y: 0.27614453, z: 0.000000094998114}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7720,7 +8049,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000017884453, y: 0.2761447, z: 0.00000003694863}
+  m_ConnectedAnchor: {x: 0.00000008288526, y: 0.27614465, z: 0.000000094987215}
   serializedVersion: 3
   m_SecondaryAxis: {x: -1, y: 0, z: 0}
   m_XMotion: 0
@@ -7970,7 +8299,7 @@ GameObject:
   - component: {fileID: 901051320}
   - component: {fileID: 901051319}
   - component: {fileID: 901051322}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Sphere (6)
   m_TagString: Moveable
   m_Icon: {fileID: 0}
@@ -8080,10 +8409,8 @@ MonoBehaviour:
     m_Bits: 64
   Slider: {fileID: 1817147609}
   JointMat: {fileID: 0}
-  otherJoints:
-  - {fileID: 586536440}
-  otherSliders:
-  - {fileID: 753132843}
+  otherJoints: []
+  otherSliders: []
   newMat: {fileID: 2100000, guid: 26d27cefa6a9c134daa79bfd702197fa, type: 2}
 --- !u!1 &923409773
 GameObject:
@@ -8836,7 +9163,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.000000037252903, y: 0.2740469, z: 0.00000008940697}
+  m_ConnectedAnchor: {x: 0.000000003979948, y: 0.27404693, z: 0.0000000117670425}
   serializedVersion: 3
   m_SecondaryAxis: {x: -1, y: 0, z: 0}
   m_XMotion: 0
@@ -10449,7 +10776,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228305667}
   m_LocalRotation: {x: 0.73210585, y: -0.008983629, z: -0.027013678, w: 0.6805958}
-  m_LocalPosition: {x: 0.000000009313226, y: 0.42099023, z: 0.00000017601997}
+  m_LocalPosition: {x: 0.000000009313226, y: 0.42099023, z: -0.00000006239861}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10468,7 +10795,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.000000009313226, y: 0.42099023, z: 0.00000017601997}
+  m_ConnectedAnchor: {x: 0.000000009313226, y: 0.42099023, z: -0.00000006239861}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -11135,7 +11462,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -1.5717146, y: 0.99791867, z: 0.20347314}
+  m_ConnectedAnchor: {x: 0.52599967, y: 1.2979187, z: -3.7320006}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 2
@@ -11423,7 +11750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1399041591
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11482,7 +11809,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399041589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.413, y: 1.259, z: -4.523}
+  m_LocalPosition: {x: 0.413, y: 1.14, z: -5.093}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11759,7 +12086,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442376904}
   m_LocalRotation: {x: -0.01814707, y: 0.00018249147, z: -0.0059201512, w: 0.9998178}
-  m_LocalPosition: {x: -0.0000000020954758, y: 0.40599436, z: -0.00000015692785}
+  m_LocalPosition: {x: -0.0000000020954758, y: 0.40599436, z: 0.000000081490725}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11806,7 +12133,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000000010011718, y: 0.4059943, z: -0.0000000027939677}
+  m_ConnectedAnchor: {x: -0.0000000020954758, y: 0.40599436, z: 0.000000081490725}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 0, z: 1}
   m_XMotion: 0
@@ -12484,6 +12811,138 @@ Transform:
   m_Father: {fileID: 1244418750}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1581342117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1581342118}
+  - component: {fileID: 1581342120}
+  - component: {fileID: 1581342119}
+  m_Layer: 7
+  m_Name: AA_Arm1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1581342118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581342117}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1736176882}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1581342119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581342117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8362d7c66e966dd498d59b31392d5148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ik: {fileID: 1581342120}
+  target: {fileID: 632919707}
+  weight: 1
+  offset: {x: 0, y: 0, z: 0}
+  targetSwitchSmoothTime: 0.3
+  weightSmoothTime: 0.3
+  smoothTurnTowardsTarget: 1
+  maxRadiansDelta: 3
+  maxMagnitudeDelta: 3
+  slerpSpeed: 3
+  pivotOffsetFromRoot: {x: 0, y: 1, z: 0}
+  minDistance: 1
+  maxRootAngle: 45
+--- !u!114 &1581342120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581342117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776adaaacdc5c4e8ab0395120a6e972b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixTransforms: 1
+  solver:
+    executedInEditor: 0
+    IKPosition: {x: 0.71356887, y: 1.7404203, z: -6.670559}
+    IKPositionWeight: 1
+    root: {fileID: 1581342118}
+    target: {fileID: 1489659236}
+    spine:
+    - transform: {fileID: 628846194}
+      weight: 0
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 0}
+      defaultLocalPosition: {x: -4.425508e-17, y: 0.12922285, z: 5.1318054e-17}
+      defaultLocalRotation: {x: -0.01047078, y: 0.0010648548, z: -0.10114939, w: 0.9948156}
+      length: 0
+      sqrMag: 0
+      axis: {x: 1, y: -0.0000016987324, z: 0.00000047683716}
+      baseForwardOffsetEuler: {x: 0, y: 0, z: 0}
+    head:
+      transform: {fileID: 628846194}
+      weight: 1
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 1}
+      defaultLocalPosition: {x: -4.425508e-17, y: 0.12922285, z: 5.1318054e-17}
+      defaultLocalRotation: {x: -0.01047078, y: 0.0010648548, z: -0.10114939, w: 0.9948156}
+      length: 0
+      sqrMag: 0
+      axis: {x: 1, y: -0.0000016987324, z: 0.00000047683716}
+      baseForwardOffsetEuler: {x: 0, y: 0, z: 0}
+    eyes: []
+    bodyWeight: 0.5
+    headWeight: 0.5
+    eyesWeight: 1
+    clampWeight: 0.5
+    clampWeightHead: 0.5
+    clampWeightEyes: 0.5
+    clampSmoothing: 2
+    spineWeightCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    spineTargetOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1597951357
 GameObject:
   m_ObjectHideFlags: 0
@@ -12745,7 +13204,7 @@ GameObject:
   - component: {fileID: 1657021193}
   - component: {fileID: 1657021192}
   - component: {fileID: 1657021195}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Sphere (4)
   m_TagString: Moveable
   m_Icon: {fileID: 0}
@@ -12986,6 +13445,140 @@ MonoBehaviour:
   MoveableJoints: []
   otherTarget: {fileID: 0}
   isHolding: 0
+--- !u!1 &1675704175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1675704176}
+  - component: {fileID: 1675704178}
+  - component: {fileID: 1675704177}
+  m_Layer: 7
+  m_Name: AA_Knee2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1675704176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675704175}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1736176882}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1675704177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675704175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8362d7c66e966dd498d59b31392d5148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ik: {fileID: 1675704178}
+  target: {fileID: 1399041593}
+  weight: 1
+  offset: {x: 0, y: 0, z: 0}
+  targetSwitchSmoothTime: 0.3
+  weightSmoothTime: 0.3
+  smoothTurnTowardsTarget: 1
+  maxRadiansDelta: 3
+  maxMagnitudeDelta: 3
+  slerpSpeed: 3
+  pivotOffsetFromRoot: {x: 0, y: 1, z: 0}
+  minDistance: 1
+  maxRootAngle: 45
+--- !u!114 &1675704178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675704175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776adaaacdc5c4e8ab0395120a6e972b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixTransforms: 1
+  solver:
+    executedInEditor: 0
+    IKPosition: {x: 0.43230855, y: 0.8254003, z: -6.726304}
+    IKPositionWeight: 1
+    root: {fileID: 1675704176}
+    target: {fileID: 1399041593}
+    spine:
+    - transform: {fileID: 241436986}
+      weight: 0
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 0}
+      defaultLocalPosition: {x: -5.3290704e-17, y: 0.40599436, z: 2.664535e-16}
+      defaultLocalRotation: {x: -0.018147066, y: 0.00018249144, z: -0.0059201503,
+        w: 0.9998178}
+      length: 0
+      sqrMag: 0
+      axis: {x: 0.0000007027993, y: -0.04894404, z: 0.99880147}
+      baseForwardOffsetEuler: {x: 0, y: 0, z: 0}
+    head:
+      transform: {fileID: 241436986}
+      weight: 1
+      solverPosition: {x: 0, y: 0, z: 0}
+      solverRotation: {x: 0, y: 0, z: 0, w: 1}
+      defaultLocalPosition: {x: -5.3290704e-17, y: 0.40599436, z: 2.664535e-16}
+      defaultLocalRotation: {x: -0.018147066, y: 0.00018249144, z: -0.0059201503,
+        w: 0.9998178}
+      length: 0
+      sqrMag: 0
+      axis: {x: 0.0000007027993, y: -0.04894404, z: 0.99880147}
+      baseForwardOffsetEuler: {x: 0, y: 0, z: 0}
+    eyes: []
+    bodyWeight: 0.5
+    headWeight: 0.5
+    eyesWeight: 1
+    clampWeight: 0.5
+    clampWeightHead: 0.5
+    clampWeightEyes: 0.5
+    clampSmoothing: 2
+    spineWeightCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.3
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    spineTargetOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1679444709
 GameObject:
   m_ObjectHideFlags: 0
@@ -13060,8 +13653,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1736176882}
   - component: {fileID: 1736176886}
-  - component: {fileID: 1736176888}
-  - component: {fileID: 1736176887}
   - component: {fileID: 1736176889}
   m_Layer: 7
   m_Name: Y Bot
@@ -13086,6 +13677,10 @@ Transform:
   - {fileID: 678327183}
   - {fileID: 60382128}
   - {fileID: 533404604}
+  - {fileID: 1675704176}
+  - {fileID: 1581342118}
+  - {fileID: 460172361}
+  - {fileID: 386291948}
   m_Father: {fileID: 1116357628}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13109,105 +13704,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &1736176887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736176881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 776adaaacdc5c4e8ab0395120a6e972b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fixTransforms: 1
-  solver:
-    executedInEditor: 0
-    IKPosition: {x: 0.4347552, y: 1.2313547, z: -7.141447}
-    IKPositionWeight: 1
-    root: {fileID: 1736176882}
-    target: {fileID: 0}
-    spine:
-    - transform: {fileID: 1797218382}
-      weight: 0
-      solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0, w: 0}
-      defaultLocalPosition: {x: 0.09125032, y: -0.066556014, z: -0.00055352744}
-      defaultLocalRotation: {x: 0.00001796428, y: -0.006333346, z: 0.99997526, w: -0.0030572517}
-      length: 0
-      sqrMag: 0
-      axis: {x: 0.0000007085946, y: -0.01266651, z: 0.9999197}
-      baseForwardOffsetEuler: {x: 0, y: 0, z: 0}
-    head:
-      transform: {fileID: 1797218382}
-      weight: 1
-      solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0, w: 1}
-      defaultLocalPosition: {x: 0.09125032, y: -0.066556014, z: -0.00055352744}
-      defaultLocalRotation: {x: 0.00001796428, y: -0.006333346, z: 0.99997526, w: -0.0030572517}
-      length: 0
-      sqrMag: 0
-      axis: {x: 0.0000007085946, y: -0.01266651, z: 0.9999197}
-      baseForwardOffsetEuler: {x: 0, y: 0, z: 0}
-    eyes: []
-    bodyWeight: 0.216
-    headWeight: 1
-    eyesWeight: 1
-    clampWeight: 0.5
-    clampWeightHead: 0.5
-    clampWeightEyes: 0.5
-    clampSmoothing: 2
-    spineWeightCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.3
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    spineTargetOffset: {x: 0, y: 0, z: 0}
---- !u!114 &1736176888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736176881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8362d7c66e966dd498d59b31392d5148, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ik: {fileID: 1736176887}
-  target: {fileID: 1399041593}
-  weight: 1
-  offset: {x: 0, y: 0, z: 0}
-  targetSwitchSmoothTime: 0.3
-  weightSmoothTime: 0.3
-  smoothTurnTowardsTarget: 1
-  maxRadiansDelta: 3
-  maxMagnitudeDelta: 3
-  slerpSpeed: 3
-  pivotOffsetFromRoot: {x: 0, y: 1, z: 0}
-  minDistance: 1
-  maxRootAngle: 45
 --- !u!114 &1736176889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13223,9 +13719,13 @@ MonoBehaviour:
   FullRig: {fileID: 0}
   Target: {fileID: 0}
   Target2: {fileID: 0}
+  FallDelay: 0.5
+  minJointHeight: 0.627
+  maxJointHeight: 0.86
   puppetMaster: {fileID: 0}
   AnimationType: 
   AnimationName: 
+  levelcompleted: {fileID: 0}
   StartBackflip: 0
 --- !u!1 &1757061922
 GameObject:
@@ -13413,7 +13913,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790423804}
   m_LocalRotation: {x: 0.000017964281, y: -0.0063333465, z: 0.99997526, w: -0.0030572517}
-  m_LocalPosition: {x: 0.0912503, y: -0.066555955, z: -0.00055328803}
+  m_LocalPosition: {x: 0.0912503, y: -0.066555955, z: -0.00055352645}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13460,7 +13960,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.09125033, y: -0.066556014, z: -0.0005535211}
+  m_ConnectedAnchor: {x: 0.0912503, y: -0.066555955, z: -0.00055352645}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 0, z: 1}
   m_XMotion: 0
@@ -13739,7 +14239,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 1817147609}
   sliderValue: 0
-  Target: {fileID: 632919707}
+  Target:
+  - {fileID: 632919707}
+  - {fileID: 0}
   Camera: {fileID: 314662833563187169}
   directionMultiplier: 1
 --- !u!114 &1817147613
@@ -14674,7 +15176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977576401}
   m_LocalRotation: {x: -0.000000059604645, y: -0.00000008940697, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00000023871237, y: 0.27404687, z: -0.00000007955533}
+  m_LocalPosition: {x: 2.8830985e-10, y: 0.2740469, z: -0.00000007855852}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14721,7 +15223,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.000000014901161, y: 0.27404684, z: -0.00000006100163}
+  m_ConnectedAnchor: {x: 2.8830985e-10, y: 0.27404702, z: -0.00000007854943}
   serializedVersion: 3
   m_SecondaryAxis: {x: -1, y: 0, z: 0}
   m_XMotion: 0
@@ -15162,7 +15664,7 @@ GameObject:
   - component: {fileID: 2060457559}
   - component: {fileID: 2060457558}
   - component: {fileID: 2060457561}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Sphere (5)
   m_TagString: Moveable
   m_Icon: {fileID: 0}

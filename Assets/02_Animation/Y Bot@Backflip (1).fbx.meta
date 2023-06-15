@@ -57,7 +57,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.08411214
+      - time: 0.20956017
         functionName: Check1
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -71,14 +71,14 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.2685686
+      - time: 0.22681662
         functionName: Check3
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.31283814
+      - time: 0.2685686
         functionName: Check4
         data: 
         objectReferenceParameter: {instanceID: 0}

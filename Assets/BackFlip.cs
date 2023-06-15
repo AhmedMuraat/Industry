@@ -9,15 +9,24 @@ public class BackFlip : MonoBehaviour
     public GameObject FullRig;
     public GameObject Target;
     public GameObject Target2;
+
+    public float FallDelay = 0.5f;
+    public float minJointHeight = 0.627f;
+    public float maxJointHeight = 0.86f;
+    GameObject[] JointsOff;
+    GameObject[] JointsOn;
     public PuppetMaster puppetMaster;
     public string AnimationType;
     public string AnimationName;
-    
+    public LevelCompletion levelcompleted;
+
     // Start is called before the first frame update
     public bool StartBackflip;
     void Start()
     {
         Animator = GetComponent<Animator>();
+        JointsOff = GameObject.FindGameObjectsWithTag("NonMoveable");
+        JointsOn = GameObject.FindGameObjectsWithTag("Moveable");
     }
     void Update()
     {
@@ -37,6 +46,17 @@ public class BackFlip : MonoBehaviour
     {
         print("test");
         PauseAnimation();
+        if (Target.transform.position.y > maxJointHeight || Target.transform.position.y < minJointHeight)
+        {
+            StartCoroutine(AnimationOff());
+            Debug.Log("Bad posture");
+            StartCoroutine(Failed());
+        }
+        else
+        {
+            ContinueAnimation();
+        }
+
     }
 
     void Check2()
@@ -71,5 +91,30 @@ public class BackFlip : MonoBehaviour
     void PauseAnimation()
     {
         Animator.speed = 0f;
+    }
+
+    void ContinueAnimation()
+    {
+        Animator.speed = 1;
+    }
+
+    IEnumerator AnimationOff()
+    {
+        yield return new WaitForSeconds(FallDelay);
+        print("Now");
+        RagdollmodeOn();
+    }
+
+    IEnumerator Failed()
+    {
+        yield return new WaitForSeconds(2);
+
+        levelcompleted.Failedscreen();
+    }
+    IEnumerator Succeed()
+    {
+        yield return new WaitForSeconds(2);
+
+        levelcompleted.Completionscreen();
     }
 }
