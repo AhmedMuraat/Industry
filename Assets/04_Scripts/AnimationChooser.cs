@@ -40,6 +40,9 @@ public class AnimationChooser : MonoBehaviour
     public LookAtController lookAt1C;
     public LookAtIK lookAt2;
     public LookAtController lookAt2C;
+    public bool AnimationPlaying = false;
+
+
 
     void GetRagdollElements()
     {
@@ -89,7 +92,7 @@ public class AnimationChooser : MonoBehaviour
 
 
     public bool StartStandingUp;
-    bool IsPlaying;
+    public bool IsPlaying;
     // Start is called before the first frame update
     void Start()
     {
@@ -105,9 +108,10 @@ public class AnimationChooser : MonoBehaviour
         if (StartStandingUp)
         {
             StartStandingUp = false;
+            AnimationPlaying = true;
             if (FirstCheck)
             {
-                Animator.SetTrigger(AnimationType);
+                Animator.SetTrigger("Start");
                 if (Target.transform.position.y > maxJointHeight || Target.transform.position.y < minJointHeight)
                 {
                     StartCoroutine(AnimationOff());
@@ -207,7 +211,6 @@ public class AnimationChooser : MonoBehaviour
     void End()
     {
         Animator.speed = 1f;
-        Animator.SetTrigger("Done");
         if (lookAt1 is not null)
         {
 
@@ -244,6 +247,7 @@ public class AnimationChooser : MonoBehaviour
 
         SecondCheck = true;
         Animator.speed = 0f;
+        AnimationPlaying = false;
 
         TurnOnJoints();
     }
