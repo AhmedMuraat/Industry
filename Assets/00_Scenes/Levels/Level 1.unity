@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 9456956}
   - component: {fileID: 9456955}
   - component: {fileID: 9456954}
+  - component: {fileID: 9456957}
   m_Layer: 5
   m_Name: SliderHip
   m_TagString: Untagged
@@ -545,6 +546,26 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9456957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9456952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2885bf69d1ea713409c120a05f6936be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  YBot: {fileID: 1736176881}
+  Camera: {fileID: 327255944}
+  Background: {fileID: 1334897880}
+  BackgroundStartColor: {r: 0, g: 0.63529414, b: 0.6431373, a: 1}
+  FillStartColor: {r: 0, g: 0.90588236, b: 0.8392157, a: 1}
+  Fill: {fileID: 1002791944}
+  AnimationPlaying: 0
+  isRotating: 0
 --- !u!1 &12336809
 GameObject:
   m_ObjectHideFlags: 0
@@ -4119,6 +4140,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   muscleMover:
   - {fileID: 930128127}
+  mainCamera: {fileID: 1597928617}
+  Target: {x: 0, y: 0.7166, z: 0, w: 0.6974}
+  startPos: {x: 0, y: 0, z: 0, w: 0}
+  TimeElapsed: 0
+  LerpDuration: 2
+  isRotating: 0
 --- !u!1 &328104384
 GameObject:
   m_ObjectHideFlags: 0
@@ -15466,7 +15493,9 @@ MonoBehaviour:
   lookAt1C: {fileID: 0}
   lookAt2: {fileID: 0}
   lookAt2C: {fileID: 0}
+  AnimationPlaying: 0
   StartStandingUp: 0
+  IsPlaying: 0
 --- !u!4 &1410563617
 Transform:
   m_ObjectHideFlags: 0
@@ -18031,7 +18060,9 @@ MonoBehaviour:
   lookAt1C: {fileID: 0}
   lookAt2: {fileID: 0}
   lookAt2C: {fileID: 0}
+  AnimationPlaying: 0
   StartStandingUp: 0
+  IsPlaying: 0
 --- !u!95 &1736176886
 Animator:
   serializedVersion: 5
@@ -23070,6 +23101,7 @@ GameObject:
   - component: {fileID: 3920172766670776655}
   - component: {fileID: 4977809050987038580}
   - component: {fileID: 5005077310138188786}
+  - component: {fileID: 7054945482041339694}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -23620,6 +23652,22 @@ RectTransform:
   m_AnchoredPosition: {x: -50, y: -182}
   m_SizeDelta: {x: 280, y: 140}
   m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &7054945482041339694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4125967893646206251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95063feba7ba3d9409183a95856b6243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  YBot: {fileID: 1736176881}
+  Camera: {fileID: 327255944}
+  AnimationPlaying: 0
+  isRotating: 0
 --- !u!224 &7205335605791584343
 RectTransform:
   m_ObjectHideFlags: 0
