@@ -1,6 +1,7 @@
 using RootMotion.Dynamics;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BackFlip : MonoBehaviour
@@ -19,11 +20,32 @@ public class BackFlip : MonoBehaviour
     public string AnimationType;
     public string AnimationName;
     public LevelCompletion levelcompleted;
+   //new
+
+    List<GameObject> AllMoveableJoints = new List<GameObject>();
+    public Material Highlighted;
+    public Material NonHighlighted;
+    public List<GameObject> Keyframe1 = new List<GameObject>();
 
     // Start is called before the first frame update
     public bool StartBackflip;
     void Start()
     {
+        AllMoveableJoints = GameObject.FindGameObjectsWithTag("Moveable").ToList();
+
+        //give all moveable joint the nonhighlighted material
+        for (int i = 0; i < AllMoveableJoints.Count; i++)
+        {
+            AllMoveableJoints[i].GetComponent<Renderer>().material = NonHighlighted;
+
+        }
+        
+        //give all moveable joint for the first keyframe the highlighted material
+        for (int i = 0; i < Keyframe1.Count; i++)
+        {
+            Keyframe1[i].GetComponent<Renderer>().material = Highlighted;
+        }
+
         Animator = GetComponent<Animator>();
         JointsOff = GameObject.FindGameObjectsWithTag("NonMoveable");
         JointsOn = GameObject.FindGameObjectsWithTag("Moveable");
