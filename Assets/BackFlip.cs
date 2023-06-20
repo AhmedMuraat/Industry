@@ -23,9 +23,11 @@ public class BackFlip : MonoBehaviour
    //new
 
     List<GameObject> AllMoveableJoints = new List<GameObject>();
-    public Material Highlighted;
+    public Material LeftHighlighted;
+    public Material RightHighlighted;
     public Material NonHighlighted;
     public List<GameObject> Keyframe1 = new List<GameObject>();
+    public LayerMask layerMask;
 
     // Start is called before the first frame update
     public bool StartBackflip;
@@ -43,7 +45,7 @@ public class BackFlip : MonoBehaviour
         //give all moveable joint for the first keyframe the highlighted material
         for (int i = 0; i < Keyframe1.Count; i++)
         {
-            Keyframe1[i].GetComponent<Renderer>().material = Highlighted;
+            Keyframe1[i].GetComponent<Renderer>().material = LeftHighlighted;
         }
 
         Animator = GetComponent<Animator>();
@@ -52,7 +54,7 @@ public class BackFlip : MonoBehaviour
     }
     void Update()
     {
-
+       
     }
 
 

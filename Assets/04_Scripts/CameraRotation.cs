@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class CameraRotation : MonoBehaviour
 {
-    public MuscleMover[] muscleMover;
     Touch Touch;
     Quaternion rotY;
     float speed = 0.1f;
-    public GameObject mainCamera;
     public Quaternion Target = new Quaternion(0, 0.7166f, 0, 0.69740f);
     public Quaternion startPos;
     public float TimeElapsed = 0;
@@ -37,13 +35,6 @@ public class CameraRotation : MonoBehaviour
             isRotating = false;
             if (Input.touchCount == 1)
             {
-                for (int i = 0; i < muscleMover.Length; i++)
-                {
-                    if (muscleMover[i].isHolding)
-                    {
-                        return;
-                    }
-                }
 
                 Touch = Input.GetTouch(0);
                 if (Touch.phase == TouchPhase.Moved)

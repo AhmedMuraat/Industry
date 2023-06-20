@@ -6972,7 +6972,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 753132843}
   sliderValue: 0
-  Target: {fileID: 1399041593}
+  Target:
+  - {fileID: 632919707}
   Camera: {fileID: 314662833563187169}
   directionMultiplier: 1
 --- !u!114 &753132847
@@ -14033,7 +14034,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 1817147609}
   sliderValue: 0
-  Target: {fileID: 632919707}
+  Target:
+  - {fileID: 1399041593}
   Camera: {fileID: 314662833563187169}
   directionMultiplier: 1
 --- !u!114 &1817147613
