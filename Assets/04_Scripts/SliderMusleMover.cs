@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SliderMusleMover : MonoBehaviour
 {
-    public GameObject Target;
+    public List<GameObject> Target = new List<GameObject>();
 
     [HideInInspector]
     public Slider Slider;
@@ -18,6 +18,13 @@ public class SliderMusleMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        for (int i = 0; i < Target.Count; i++)
+        {
+
+            Vector3 newPosition = Target[i].transform.position;
+            newPosition.y = Slider.value;
+
+            Target[i].transform.position = newPosition;
+        }
     }
 }
