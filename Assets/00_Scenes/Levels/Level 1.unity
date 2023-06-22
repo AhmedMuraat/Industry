@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4470036, g: 0.4968962, b: 0.5750635, a: 1}
+  m_IndirectSpecularColor: {r: 0.44443998, g: 0.4936388, b: 0.5724695, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -492,7 +492,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 9456952}
   sliderValue: 0
-  Target: {fileID: 2124253229}
+  Target:
+  - {fileID: 2124253229}
   Camera: {fileID: 327255944}
   directionMultiplier: -1
 --- !u!114 &9456956
@@ -8874,7 +8875,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 784731052}
   sliderValue: 0
-  Target: {fileID: 2124253229}
+  Target:
+  - {fileID: 0}
   Camera: {fileID: 327255944}
   directionMultiplier: -1
 --- !u!114 &784731056
