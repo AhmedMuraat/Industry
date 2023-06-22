@@ -4145,7 +4145,7 @@ MonoBehaviour:
   Target: {x: 0, y: 0.7166, z: 0, w: 0.6974}
   startPos: {x: 0, y: 0, z: 0, w: 0}
   TimeElapsed: 0
-  LerpDuration: 2
+  LerpDuration: 1.5
   isRotating: 0
 --- !u!1 &328104384
 GameObject:
