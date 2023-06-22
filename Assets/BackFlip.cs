@@ -3,35 +3,31 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BackFlip : MonoBehaviour
 {
+    //new
     Animator Animator;
-    public GameObject FullRig;
-    public GameObject Target;
-    public GameObject Target2;
-
-    public float FallDelay = 0.5f;
-    public float minJointHeight = 0.627f;
-    public float maxJointHeight = 0.86f;
-    GameObject[] JointsOff;
-    GameObject[] JointsOn;
     public PuppetMaster puppetMaster;
-    public string AnimationType;
-    public string AnimationName;
-    public LevelCompletion levelcompleted;
-   //new
+    public LevelCompletion LevelCompletedScript;
+    [Header("Sliders")]
+    public Slider LeftSlider;
+    public Slider RightSlider;
+
+    public Material LeftHighlighted;
+    public Material RightHighlighted;
+    public Material NonHighlighted;
+    public List<JointInfo> Keyframe1 = new List<JointInfo>();
+    public List<JointInfo> Keyframe2 = new List<JointInfo>();
+    int CurrentKeyframeID = 0;
 
     List<GameObject> AllMoveableJoints = new List<GameObject>();
-    public Material Highlighted;
-    public Material NonHighlighted;
-    public List<GameObject> Keyframe1 = new List<GameObject>();
 
-    // Start is called before the first frame update
-    public bool StartBackflip;
     void Start()
     {
         AllMoveableJoints = GameObject.FindGameObjectsWithTag("Moveable").ToList();
+        Animator = GetComponent<Animator>();
 
         //give all moveable joint the nonhighlighted material
         for (int i = 0; i < AllMoveableJoints.Count; i++)
@@ -39,16 +35,9 @@ public class BackFlip : MonoBehaviour
             AllMoveableJoints[i].GetComponent<Renderer>().material = NonHighlighted;
 
         }
-        
-        //give all moveable joint for the first keyframe the highlighted material
-        for (int i = 0; i < Keyframe1.Count; i++)
-        {
-            Keyframe1[i].GetComponent<Renderer>().material = Highlighted;
-        }
 
-        Animator = GetComponent<Animator>();
-        JointsOff = GameObject.FindGameObjectsWithTag("NonMoveable");
-        JointsOn = GameObject.FindGameObjectsWithTag("Moveable");
+        Animator.speed = 0.5f;
+        Animator.SetTrigger("Start");
     }
     void Update()
     {
@@ -68,23 +57,100 @@ public class BackFlip : MonoBehaviour
     {
         print("test");
         PauseAnimation();
-        if (Target.transform.position.y > maxJointHeight || Target.transform.position.y < minJointHeight)
+        SetColorForJoint(Keyframe1);
+        SetSlidersNewTargets(Keyframe1);
+    }
+    void SetSlidersNewTargets(List<JointInfo> joints)
+    {
+        SliderMusleMover LeftsliderMusleMover = LeftSlider.gameObject.GetComponent<SliderMusleMover>();
+        SliderMusleMover RightsliderMusleMover = RightSlider.gameObject.GetComponent<SliderMusleMover>();
+        LeftsliderMusleMover.Target.Clear();
+        RightsliderMusleMover.Target.Clear();
+
+        for (int i = 0; i < joints.Count; i++)
         {
-            StartCoroutine(AnimationOff());
-            Debug.Log("Bad posture");
-            StartCoroutine(Failed());
-        }
-        else
-        {
-            ContinueAnimation();
+            if (joints[i].direction == JointInfo.Direction.Left)
+            {
+                LeftSlider.value = joints[i].TargetStartingPoint;
+
+                LeftSlider.minValue = joints[i].TargetMinHeight;
+                LeftSlider.maxValue = joints[i].TargetMaxHeight;
+                LeftsliderMusleMover.Target.Add(joints[i].Target);
+            }
+            else
+            {
+                RightSlider.value = joints[i].TargetStartingPoint;
+
+                RightSlider.minValue = joints[i].TargetMinHeight;
+                RightSlider.maxValue = joints[i].TargetMaxHeight;
+                RightsliderMusleMover.Target.Add(joints[i].Target);
+
+            }
         }
 
+    }
+    public void StartAnimation()
+    {
+        switch (CurrentKeyframeID)
+        {
+            case 0:
+                CheckRules(Keyframe1, true);
+                break;
+            case 1:
+                CheckRules(Keyframe1, false);
+                break;
+            case 2:
+                CheckRules(Keyframe1, false);
+                break;
+            case 3:
+                CheckRules(Keyframe1, false);
+                break;
+        }
+        CurrentKeyframeID++;
+        Animator.speed = 0.5f;
+    }
+    void CheckRules(List<JointInfo> joints, bool check)
+    {
+        if (!check)
+            return;
+
+        for (int i = 0; i < joints.Count; i++)
+        {
+            if (!(joints[i].Target.transform.position.y >= joints[i].MinHeight && joints[i].Target.transform.position.y <= joints[i].MaxHeight))
+            {
+                //dead
+                RagdollmodeOn();
+            }
+        }
+    }
+
+    void SetColorForJoint(List<JointInfo> joints)
+    {
+        for (int i = 0; i < AllMoveableJoints.Count; i++)
+        {
+            AllMoveableJoints[i].GetComponent<Renderer>().material = NonHighlighted;
+
+        }
+
+        foreach (JointInfo joint in joints)
+        {
+            if (joint.direction == JointInfo.Direction.Right)
+            {
+                joint.Joint.GetComponent<Renderer>().material = RightHighlighted;
+            }
+            else
+            {
+                joint.Joint.GetComponent<Renderer>().material = LeftHighlighted;
+            }
+        }
     }
 
     void Check2()
     {
         print("test");
         PauseAnimation();
+        SetColorForJoint(Keyframe2);
+        SetSlidersNewTargets(Keyframe2);
     }
 
     void Check3()
@@ -105,11 +171,6 @@ public class BackFlip : MonoBehaviour
         PauseAnimation();
     }
 
-    public void StartAnimation()
-    {
-        StartBackflip = true;
-    }
-
     void PauseAnimation()
     {
         Animator.speed = 0f;
@@ -120,23 +181,38 @@ public class BackFlip : MonoBehaviour
         Animator.speed = 1;
     }
 
-    IEnumerator AnimationOff()
-    {
-        yield return new WaitForSeconds(FallDelay);
-        print("Now");
-        RagdollmodeOn();
-    }
+
 
     IEnumerator Failed()
     {
         yield return new WaitForSeconds(2);
 
-        levelcompleted.Failedscreen();
+        LevelCompletedScript.Failedscreen();
     }
     IEnumerator Succeed()
     {
         yield return new WaitForSeconds(2);
 
-        levelcompleted.Completionscreen();
+        LevelCompletedScript.Completionscreen();
     }
+}
+
+[System.Serializable]
+public class JointInfo
+{
+    public GameObject Joint;
+    public Direction direction;
+    public GameObject Target;
+    public float TargetStartingPoint;
+    public float TargetMinHeight;
+    public float TargetMaxHeight;
+    [Header("Allowed Rules")]
+    public float MinHeight;
+    public float MaxHeight;
+    public enum Direction
+    {
+        Left,
+        Right
+    }
+
 }
